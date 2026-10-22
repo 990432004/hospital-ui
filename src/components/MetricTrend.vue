@@ -1,0 +1,13 @@
+<script setup>
+import {ref,computed,onMounted,onUnmounted} from 'vue'
+const props=defineProps({dates:Array,values:Array,unit:String,title:String})
+const host=ref(),width=ref(800),hover=ref(-1);let observer
+onMounted(()=>{observer=new ResizeObserver(entries=>width.value=Math.max(300,entries[0].contentRect.width));observer.observe(host.value)})
+onUnmounted(()=>observer?.disconnect())
+const finite=computed(()=>props.values.filter(v=>v!==null&&Number.isFinite(v))),low=computed(()=>finite.value.length?Math.min(...finite.value):0),high=computed(()=>finite.value.length?Math.max(...finite.value):1)
+const min=computed(()=>Math.max(0,low.value-(high.value-low.value||1)*.2)),max=computed(()=>high.value+(high.value-low.value||1)*.2)
+const x=i=>58+i*(width.value-80)/Math.max(1,props.dates.length-1),y=v=>210-(v-min.value)/(max.value-min.value)*175
+const path=computed(()=>{let previous=false;return props.values.map((v,i)=>{if(v===null||!Number.isFinite(v)){previous=false;return ''}const p=`${previous?'L':'M'}${x(i)},${y(v)}`;previous=true;return p}).join(' ')})
+</script>
+<template><div ref="host" class="trend-chart"><svg width="100%" height="260" role="img" :aria-label="title+'，近30日模拟值趋势'"><g v-for="n in [0,1,2,3,4]" :key="n"><line x1="58" :x2="width-22" :y1="35+n*43.75" :y2="35+n*43.75" class="chart-grid"/><text x="48" :y="39+n*43.75" text-anchor="end">{{(max-(max-min)*n/4).toFixed(1)}}</text></g><text x="6" y="16">{{unit}}</text><path :d="path" fill="none" stroke="rgb(var(--v-theme-primary))" stroke-width="2.5"/><template v-for="(date,i) in dates" :key="date"><text v-if="i%6===0||i===29" :x="x(i)" y="237" text-anchor="middle">{{date.slice(5)}}</text><circle v-if="values[i]!==null" :cx="x(i)" :cy="y(values[i])" r="3" fill="rgb(var(--v-theme-primary))"/><rect :x="x(i)-9" y="25" width="18" height="190" fill="transparent" tabindex="0" :aria-label="date+' '+(values[i]??'无数据')+unit" @mouseenter="hover=i" @mouseleave="hover=-1" @focus="hover=i" @blur="hover=-1"><title>{{date}}：{{values[i]??'无数据'}} {{unit}}</title></rect></template></svg><div v-if="hover>=0" class="chart-tooltip">{{dates[hover]}} · {{values[hover]??'无数据'}} {{unit}}</div><div v-if="!finite.length" class="empty">当前范围没有匹配数据</div></div></template>
+<style scoped>.trend-chart{position:relative;min-width:0;margin:16px 0}.trend-chart text{font-size:12px;fill:rgba(var(--v-theme-on-surface),.65)}.chart-grid{stroke:rgba(var(--v-border-color),var(--v-border-opacity))}.chart-tooltip{position:absolute;top:0;right:10px;background:rgb(var(--v-theme-surface));border:1px solid rgba(var(--v-border-color),var(--v-border-opacity));padding:7px 12px;border-radius:6px;font-size:12px;pointer-events:none}.empty{position:absolute;inset:0;display:grid;place-content:center}</style>
