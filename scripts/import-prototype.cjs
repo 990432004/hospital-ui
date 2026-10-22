@@ -4,7 +4,7 @@ const source=path.resolve(__dirname,'../../decision-app');
 const memory=new Map(); const ctx={console:{log(){}},localStorage:{getItem:k=>memory.get(k)||null,setItem:(k,v)=>memory.set(k,v)}};
 ctx.window=ctx; vm.createContext(ctx);
 const files=['data.js','alert-data.js','alert-warning.js','rule-workflows.js','decision-model.js'];
-for(const file of files) vm.runInContext(fs.readFileSync(path.join(source,file),'utf8'),ctx,{filename:file});
+for(const file of files) {vm.runInContext(fs.readFileSync(path.join(source,file),'utf8'),ctx,{filename:file});if(file==='data.js')require('./align-e3-scenario.cjs').alignScenario(ctx.mockData);}
 const events=ctx.generateWarningEvents('all','all',[]);
 const rules=ctx.SURGICAL_RISK_RULES.map(r=>({id:r.id,goal:r.workflow.goal,mode:r.workflow.mode,phase:r.workflow.phase,threshold:r.threshold,advice:r.advice}));
 const surgeries=ctx.mockData.surgeries.map(({vitalSigns,...s})=>({...s,vitalSignsCount:vitalSigns?.length||0}));

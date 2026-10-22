@@ -1,0 +1,44 @@
+{
+  "verifiedOn": "2026-10-22",
+  "source": "E3 project 10 live read-only space and plane-sheet API",
+  "sourceSha256": "3e1269b5c80a357ac0aaf98da95d5a0935f07d5f6ea8b15f09e0941fa9fcd026",
+  "scenarioSha256": "676a6e09d3ea30871b5dfa81ec23c13cd2570d055b537c534ef15f88fedeb668",
+  "sceneId": 20260722000111,
+  "floors": 36,
+  "catalogRoomTypes": {
+    "ward": 248,
+    "storage": 9,
+    "pacu": 14,
+    "operating": 50
+  },
+  "surgeries": 154,
+  "timelineNodes": 3850,
+  "transfers": 308,
+  "crossBuildingTransfers": 41,
+  "operatingRoomsUsed": 40,
+  "simulatedPacuBeds": 56,
+  "unresolvedRoomReferences": 0,
+  "checks": [
+    "Room IDs/codes match live E3 export",
+    "Scene/building/floor ancestry matches live export",
+    "Clinical endpoints and timeline nodes resolve",
+    "Planned and actual chronology validated",
+    "Actual events capped at snapshot",
+    "PACU reservations do not overlap",
+    "Seed surgeries match full scenario",
+    "Replay dates shift transfer times with +08:00 retained",
+    "Active transfers use actual departure with explicitly estimated arrival"
+  ],
+  "browserChecks": [
+    "HTTP 200 at /gantt",
+    "SS0001 selection displays B2-2F-R16 and full ward/OR/PACU paths",
+    "Floor 2 filter displays 77 surgeries",
+    "No browser console errors observed"
+  ],
+  "limits": [
+    "Clinical data and bed capacities remain simulated",
+    "E3 interior layout is reference inference",
+    "Cross-building routing not computed",
+    "3D iframe not connected in this page"
+  ]
+}

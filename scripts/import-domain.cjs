@@ -2,6 +2,7 @@ const fs=require('node:fs'),vm=require('node:vm'),path=require('node:path');
 const root=path.resolve(__dirname,'../../decision-app');
 const context={console:{log(){}}};context.window=context;vm.createContext(context);
 vm.runInContext(fs.readFileSync(path.join(root,'data.js'),'utf8'),context);
+require('./align-e3-scenario.cjs').alignScenario(context.mockData);
 vm.runInContext(fs.readFileSync(path.join(root,'mdt-module.js'),'utf8'),context);
 context.mockData.meta.mdtSummary=context.getMDTStats('today','all');
 fs.mkdirSync(path.resolve(__dirname,'../public/data'),{recursive:true});

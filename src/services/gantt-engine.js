@@ -1941,12 +1941,20 @@ const DEVIATION_FILL_ALPHA = 0.22;
       this._listen(canvas, 'keydown', e => this._onKeyDown(e));
     }
 
+    _replayTimeAt(x){
+      const time=this._xToTime(x),start=new Date(this.viewDate),end=new Date(this.viewDate);start.setHours(0,0,0,0);end.setHours(23,59,59,0);
+      return new Date(Math.min(end.getTime(),Math.max(start.getTime(),time.getTime())));
+    }
     _onMouseMove(e) {
       const rect = this.canvas.getBoundingClientRect();
       const dpr = window.devicePixelRatio || 1;
       this.mouseX = (e.clientX - rect.left);
       this.mouseY = (e.clientY - rect.top);
 
+      if(this.isTimeDragging){
+        this.selectedTime=this._replayTimeAt(Math.max(this.options.Y_AXIS_WIDTH,this.mouseX));
+        this._emit('timeSelect',{time:this.selectedTime});this._requestRender();return;
+      }
       if (this.isDragging) {
         const dx = this.mouseX - this.dragStartX;
         const dy = this.mouseY - this.dragStartY;
@@ -1994,6 +2002,8 @@ const DEVIATION_FILL_ALPHA = 0.22;
         this.mouseX = e.clientX - rect.left;
         this.mouseY = e.clientY - rect.top;
         this.didDrag = false;
+        this.isTimeDragging=this.mouseX>=this.options.Y_AXIS_WIDTH&&(this.mouseY<this.options.HEADER_HEIGHT||(this.selectedTime&&Math.abs(this._timeToX(this.selectedTime)-this.mouseX)<6));
+        if(this.isTimeDragging){this.didDrag=true;this.selectedTime=this._replayTimeAt(this.mouseX);this._emit('timeSelect',{time:this.selectedTime});this.canvas.style.cursor='ew-resize';this._requestRender();return;}
         this.isDragging = true;
         this.dragStartX = this.mouseX;
         this.dragStartY = this.mouseY;
@@ -2004,11 +2014,13 @@ const DEVIATION_FILL_ALPHA = 0.22;
     }
 
     _onMouseUp(e) {
+      this.isTimeDragging=false;
       this.isDragging = false;
       this.canvas.style.cursor = this.hoveredSurgery ? 'pointer' : 'default';
     }
 
     _onMouseLeave() {
+      this.isTimeDragging=false;
       this.isDragging = false;
       this.hoveredSurgery = null;
       this.hoveredTimelineNode = null;
@@ -2095,7 +2107,7 @@ const DEVIATION_FILL_ALPHA = 0.22;
       }
 
       if (clickX >= this.options.Y_AXIS_WIDTH && clickY >= this.options.HEADER_HEIGHT) {
-        this.selectedTime = this._xToTime(clickX);
+        this.selectedTime = this._replayTimeAt(clickX);
       } else {
         this.selectedTime = null;
       }
@@ -2355,9 +2367,8 @@ const DEVIATION_FILL_ALPHA = 0.22;
       }
       if (e.key === 'Escape') {
         this.selectedSurgery = null;
-        this.selectedTime = null;
         this._emit('select', {surgery:null});
-        this._emit('timeSelect', {time:null});
+        this._emit('timeSelect', {time:this.selectedTime});
         this._requestRender();
       }
     }

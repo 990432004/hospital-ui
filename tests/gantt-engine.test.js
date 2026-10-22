@@ -26,7 +26,7 @@ test('完整场景六视图、分组展开和悬浮提示均可渲染，资源�
 })
 
 test('点击空白统一清除手术并广播同一个选中时点',()=>{const engine=makeEngine();engine.setViewDate('2026-10-21');let selection='stale',time;engine.on('select',e=>selection=e.detail.surgery);engine.on('timeSelect',e=>time=e.detail.time);engine._onClick({clientX:400,clientY:200});assert.equal(selection,null);assert.ok(time instanceof Date);engine.destroy()})
-test('Escape同步清除手术和时间；视图刷新能单独清除旧时间线',()=>{const engine=makeEngine();let selection='stale',time='stale';engine.on('select',e=>selection=e.detail.surgery);engine.on('timeSelect',e=>time=e.detail.time);engine.selectedSurgery={id:'OP1'};engine.selectedTime=new Date('2026-10-21T10:00:00');engine._onKeyDown({key:'Escape',preventDefault(){}});assert.equal(selection,null);assert.equal(time,null);engine.selectedTime=new Date();engine.clearSelectedTime();assert.equal(engine.selectedTime,null);engine.destroy()})
+test('Escape取消手术但保留复盘时间；视图刷新能单独清除旧时间线',()=>{const engine=makeEngine();let selection='stale',time='stale';engine.on('select',e=>selection=e.detail.surgery);engine.on('timeSelect',e=>time=e.detail.time);engine.selectedSurgery={id:'OP1'};engine.selectedTime=new Date('2026-10-21T10:00:00');engine._onKeyDown({key:'Escape',preventDefault(){}});assert.equal(selection,null);assert.equal(time.getTime(),new Date('2026-10-21T10:00:00').getTime());engine.selectedTime=new Date();engine.clearSelectedTime();assert.equal(engine.selectedTime,null);engine.destroy()})
 
 test('整点刻度与条带共用时间数值，缩放平移后10:46仍在10点和11点之间',()=>{
  const engine=makeEngine();engine.setViewDate('2026-10-21');
@@ -214,3 +214,9 @@ test('节点图例独立放在旧图例右侧，窄画布避让且包含全部�
  assert.equal(boxes[0][0],12);assert.ok(boxes[0][1]+boxes[0][3]<540);
  engine.destroy();
 });
+test('拖动时间表头同步复盘时点且保留所选手术与视口',()=>{
+ const engine=makeEngine();engine.setViewDate('2026-10-21');engine.selectedSurgery={id:'OP1'};let time;
+ engine.on('timeSelect',e=>time=e.detail.time);const offset=engine.offsetX;
+ engine._onMouseDown({button:0,clientX:400,clientY:10});engine._onMouseMove({clientX:500,clientY:10});engine._onMouseUp({});engine._onClick({clientX:500,clientY:10});
+ assert.equal(engine.offsetX,offset);assert.equal(engine.selectedSurgery.id,'OP1');assert.ok(time instanceof Date);assert.equal(time.getTime(),engine._xToTime(500).getTime());engine.destroy();
+})

@@ -1,0 +1,4 @@
+{
+  "id": 20260722000111,
+  "effectsConfigJson": "{\"version\":1,\"dataEffects\":[{\"id\":\"9e444e89-da37-4a63-8a5d-8a42ea686f1d\",\"name\":\"2号楼自动转运\",\"definitionId\":61,\"defineCode\":\"com-hospital-transfer\",\"enabled\":true,\"parameters\":{\"transfer_building_id\":\"20260722000112\",\"transfer_allowed_elevators\":\"[\\\"ZCH-2-E1\\\",\\\"ZCH-2-E2\\\"]\",\"transfer_width\":1,\"transfer_margin\":0.05,\"transfer_room_map\":\"{}\",\"transfer_time_format\":\"iso\",\"transfer_color\":\"#00DBD1\"}}],\"antialiasing\":{\"mode\":\"msaa\",\"samples\":4},\"emission\":{\"enabled\":false,\"color\":\"#33D6EF\",\"intensity\":1,\"pulse\":false},\"bloom\":{\"enabled\":false,\"strength\":0.35,\"radius\":0.45,\"threshold\":1.6},\"hover\":{\"enabled\":false,\"color\":\"#33D6EF\",\"strength\":3},\"selection\":{\"enabled\":false,\"color\":\"#33D6EF\",\"strength\":3}}"
+}

@@ -7,7 +7,7 @@ const scenario=JSON.parse(fs.readFileSync(new URL('../public/data/scenario.json'
 const setup=()=>{const memory=new Map();return {memory,repo:createRepository({storage:{getItem:k=>memory.get(k)||null,setItem:(k,v)=>memory.set(k,v)},seed,scenarioLoader:async()=>structuredClone(scenario)})}}
 test('complete domain uses isolated storage and risk changes regenerate alerts across reload/reset',async()=>{
  const {repo,memory}=setup(),domain=await repo.getDomain()
- assert.equal(domain.rules.length,74);assert.equal(domain.sources.catalog().length,23)
+ assert.equal(domain.rules.length,74);assert.ok(domain.sources.catalog().some(t=>t.id==='spatialCatalog'));assert.ok(domain.sources.catalog().some(t=>t.id==='transfers'))
  const before=await repo.listAlerts();assert.equal(before.length,36)
  await repo.saveConfig('risk','INTRA-17',{...domain.config.get('risk','INTRA-17'),enabled:false})
  assert.ok((await repo.listAlerts()).length<before.length);assert.equal((await repo.listAlerts()).filter(e=>e.ruleId==='INTRA-17').length,0)

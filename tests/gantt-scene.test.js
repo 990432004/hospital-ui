@@ -11,3 +11,8 @@ test('all three panels share stable surgery identity, date and cursor time, incl
  assert.equal(acceptSceneMessage(good,endpoint.origin,source,['OPR1']).surgeryId,'OPR1')
  for(const bad of [{...good,origin:'https://other.test'},{...good,source:{}},{...good,data:{type:'hospital:scene-select',surgeryId:'unknown'}}])assert.equal(acceptSceneMessage(bad,endpoint.origin,source,['OPR1']),null)
 })
+test('control packets retain scene scope on deselect and send explicit timezone playback without patient data',async()=>{
+ const {buildGanttControl}=await import('../src/services/gantt-scene.js');
+ const c=buildGanttControl({date:'2026-10-23',time:'14:00',surgeryId:null},{projectId:10,sceneId:20});
+ assert.deepEqual(c,{projectId:10,sceneId:20,surgeryId:null,date:'2026-10-23',timeMs:Date.parse('2026-10-23T14:00:00+08:00'),play:false,sceneOnly:true});
+})

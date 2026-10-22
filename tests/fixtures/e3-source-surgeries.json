@@ -1,0 +1,3630 @@
+{
+  "meta": {
+    "generatedAt": "2026-10-21T14:00:00+08:00",
+    "asOf": "2026-10-21T14:00:00+08:00",
+    "date": "2026-10-21",
+    "timezone": "Asia/Shanghai",
+    "seed": 20261021,
+    "scenarioId": "baseline-2026-10-21",
+    "hospital": "某三甲肿瘤医院",
+    "department": "手术部",
+    "version": "3.0.0",
+    "historyDays": 180,
+    "availableDateRange": {
+      "start": "2026-04-25",
+      "end": "2026-10-21"
+    },
+    "scale": {
+      "operatingRooms": 40,
+      "medicalGroups": 80,
+      "surgeons": 200,
+      "anesthesiologists": 55,
+      "circulatingNurses": 85,
+      "scrubNurses": 85,
+      "criticalEquipment": 86,
+      "pacuRooms": 6,
+      "pacuBeds": 52,
+      "patientsRange": "220-260",
+      "surgeriesRange": "135-165",
+      "historicalCaseFacts": 21921
+    },
+    "mdtSummary": {
+      "totalDiscussions": 4,
+      "completedCount": 2,
+      "scheduledCount": 1,
+      "cancelledCount": 1,
+      "discussionRate": 66.7,
+      "participationRate": 100,
+      "executionRate": 100,
+      "timelinessRate": 100
+    }
+  },
+  "operatingRooms": [
+    {
+      "id": "OR0001",
+      "roomNo": "3F-01",
+      "floor": 3,
+      "roomType": "百级",
+      "cleanLevel": "I级(特别洁净)",
+      "fixedEquipments": [
+        "麻醉机",
+        "监护仪",
+        "无影灯",
+        "手术床",
+        "输液泵",
+        "注射泵",
+        "手术显微镜",
+        "体外循环机",
+        "神经监护仪"
+      ],
+      "status": "准备中",
+      "isEmergency": true
+    },
+    {
+      "id": "OR0002",
+      "roomNo": "3F-02",
+      "floor": 3,
+      "roomType": "百级",
+      "cleanLevel": "I级(特别洁净)",
+      "fixedEquipments": [
+        "麻醉机",
+        "监护仪",
+        "无影灯",
+        "手术床",
+        "输液泵",
+        "注射泵",
+        "手术显微镜",
+        "体外循环机",
+        "神经监护仪"
+      ],
+      "status": "空闲",
+      "isEmergency": false
+    },
+    {
+      "id": "OR0003",
+      "roomNo": "3F-03",
+      "floor": 3,
+      "roomType": "百级",
+      "cleanLevel": "I级(特别洁净)",
+      "fixedEquipments": [
+        "麻醉机",
+        "监护仪",
+        "无影灯",
+        "手术床",
+        "输液泵",
+        "注射泵",
+        "手术显微镜",
+        "体外循环机",
+        "神经监护仪"
+      ],
+      "status": "手术中",
+      "isEmergency": false
+    },
+    {
+      "id": "OR0004",
+      "roomNo": "3F-04",
+      "floor": 3,
+      "roomType": "百级",
+      "cleanLevel": "I级(特别洁净)",
+      "fixedEquipments": [
+        "麻醉机",
+        "监护仪",
+        "无影灯",
+        "手术床",
+        "输液泵",
+        "注射泵",
+        "手术显微镜",
+        "体外循环机",
+        "神经监护仪"
+      ],
+      "status": "维护中",
+      "isEmergency": false
+    },
+    {
+      "id": "OR0005",
+      "roomNo": "3F-05",
+      "floor": 3,
+      "roomType": "百级",
+      "cleanLevel": "I级(特别洁净)",
+      "fixedEquipments": [
+        "麻醉机",
+        "监护仪",
+        "无影灯",
+        "手术床",
+        "输液泵",
+        "注射泵",
+        "手术显微镜",
+        "体外循环机",
+        "神经监护仪"
+      ],
+      "status": "手术中",
+      "isEmergency": false
+    },
+    {
+      "id": "OR0006",
+      "roomNo": "3F-06",
+      "floor": 3,
+      "roomType": "百级",
+      "cleanLevel": "I级(特别洁净)",
+      "fixedEquipments": [
+        "麻醉机",
+        "监护仪",
+        "无影灯",
+        "手术床",
+        "输液泵",
+        "注射泵",
+        "手术显微镜",
+        "体外循环机",
+        "神经监护仪"
+      ],
+      "status": "维护中",
+      "isEmergency": false
+    },
+    {
+      "id": "OR0007",
+      "roomNo": "3F-07",
+      "floor": 3,
+      "roomType": "百级",
+      "cleanLevel": "I级(特别洁净)",
+      "fixedEquipments": [
+        "麻醉机",
+        "监护仪",
+        "无影灯",
+        "手术床",
+        "输液泵",
+        "注射泵",
+        "手术显微镜",
+        "体外循环机",
+        "神经监护仪"
+      ],
+      "status": "手术中",
+      "isEmergency": false
+    },
+    {
+      "id": "OR0008",
+      "roomNo": "3F-08",
+      "floor": 3,
+      "roomType": "百级",
+      "cleanLevel": "I级(特别洁净)",
+      "fixedEquipments": [
+        "麻醉机",
+        "监护仪",
+        "无影灯",
+        "手术床",
+        "输液泵",
+        "注射泵",
+        "手术显微镜",
+        "体外循环机",
+        "神经监护仪"
+      ],
+      "status": "手术中",
+      "isEmergency": false
+    },
+    {
+      "id": "OR0009",
+      "roomNo": "3F-09",
+      "floor": 3,
+      "roomType": "千级",
+      "cleanLevel": "II级(标准洁净)",
+      "fixedEquipments": [
+        "麻醉机",
+        "监护仪",
+        "无影灯",
+        "手术床",
+        "输液泵",
+        "注射泵",
+        "C臂机",
+        "腹腔镜系统",
+        "术中超声"
+      ],
+      "status": "准备中",
+      "isEmergency": false
+    },
+    {
+      "id": "OR0010",
+      "roomNo": "3F-10",
+      "floor": 3,
+      "roomType": "千级",
+      "cleanLevel": "II级(标准洁净)",
+      "fixedEquipments": [
+        "麻醉机",
+        "监护仪",
+        "无影灯",
+        "手术床",
+        "输液泵",
+        "注射泵",
+        "C臂机",
+        "腹腔镜系统",
+        "术中超声"
+      ],
+      "status": "手术中",
+      "isEmergency": false
+    },
+    {
+      "id": "OR0011",
+      "roomNo": "4F-11",
+      "floor": 4,
+      "roomType": "千级",
+      "cleanLevel": "II级(标准洁净)",
+      "fixedEquipments": [
+        "麻醉机",
+        "监护仪",
+        "无影灯",
+        "手术床",
+        "输液泵",
+        "注射泵",
+        "C臂机",
+        "腹腔镜系统",
+        "术中超声"
+      ],
+      "status": "空闲",
+      "isEmergency": true
+    },
+    {
+      "id": "OR0012",
+      "roomNo": "4F-12",
+      "floor": 4,
+      "roomType": "千级",
+      "cleanLevel": "II级(标准洁净)",
+      "fixedEquipments": [
+        "麻醉机",
+        "监护仪",
+        "无影灯",
+        "手术床",
+        "输液泵",
+        "注射泵",
+        "C臂机",
+        "腹腔镜系统",
+        "术中超声"
+      ],
+      "status": "维护中",
+      "isEmergency": false
+    },
+    {
+      "id": "OR0013",
+      "roomNo": "4F-13",
+      "floor": 4,
+      "roomType": "千级",
+      "cleanLevel": "II级(标准洁净)",
+      "fixedEquipments": [
+        "麻醉机",
+        "监护仪",
+        "无影灯",
+        "手术床",
+        "输液泵",
+        "注射泵",
+        "C臂机",
+        "腹腔镜系统",
+        "术中超声"
+      ],
+      "status": "空闲",
+      "isEmergency": false
+    },
+    {
+      "id": "OR0014",
+      "roomNo": "4F-14",
+      "floor": 4,
+      "roomType": "千级",
+      "cleanLevel": "II级(标准洁净)",
+      "fixedEquipments": [
+        "麻醉机",
+        "监护仪",
+        "无影灯",
+        "手术床",
+        "输液泵",
+        "注射泵",
+        "C臂机",
+        "腹腔镜系统",
+        "术中超声"
+      ],
+      "status": "手术中",
+      "isEmergency": false
+    },
+    {
+      "id": "OR0015",
+      "roomNo": "4F-15",
+      "floor": 4,
+      "roomType": "千级",
+      "cleanLevel": "II级(标准洁净)",
+      "fixedEquipments": [
+        "麻醉机",
+        "监护仪",
+        "无影灯",
+        "手术床",
+        "输液泵",
+        "注射泵",
+        "C臂机",
+        "腹腔镜系统",
+        "术中超声"
+      ],
+      "status": "准备中",
+      "isEmergency": false
+    },
+    {
+      "id": "OR0016",
+      "roomNo": "4F-16",
+      "floor": 4,
+      "roomType": "千级",
+      "cleanLevel": "II级(标准洁净)",
+      "fixedEquipments": [
+        "麻醉机",
+        "监护仪",
+        "无影灯",
+        "手术床",
+        "输液泵",
+        "注射泵",
+        "C臂机",
+        "腹腔镜系统",
+        "术中超声"
+      ],
+      "status": "准备中",
+      "isEmergency": false
+    },
+    {
+      "id": "OR0017",
+      "roomNo": "4F-17",
+      "floor": 4,
+      "roomType": "千级",
+      "cleanLevel": "II级(标准洁净)",
+      "fixedEquipments": [
+        "麻醉机",
+        "监护仪",
+        "无影灯",
+        "手术床",
+        "输液泵",
+        "注射泵",
+        "C臂机",
+        "腹腔镜系统",
+        "术中超声"
+      ],
+      "status": "手术中",
+      "isEmergency": false
+    },
+    {
+      "id": "OR0018",
+      "roomNo": "4F-18",
+      "floor": 4,
+      "roomType": "千级",
+      "cleanLevel": "II级(标准洁净)",
+      "fixedEquipments": [
+        "麻醉机",
+        "监护仪",
+        "无影灯",
+        "手术床",
+        "输液泵",
+        "注射泵",
+        "C臂机",
+        "腹腔镜系统",
+        "术中超声"
+      ],
+      "status": "维护中",
+      "isEmergency": false
+    },
+    {
+      "id": "OR0019",
+      "roomNo": "4F-19",
+      "floor": 4,
+      "roomType": "千级",
+      "cleanLevel": "II级(标准洁净)",
+      "fixedEquipments": [
+        "麻醉机",
+        "监护仪",
+        "无影灯",
+        "手术床",
+        "输液泵",
+        "注射泵",
+        "C臂机",
+        "腹腔镜系统",
+        "术中超声"
+      ],
+      "status": "手术中",
+      "isEmergency": false
+    },
+    {
+      "id": "OR0020",
+      "roomNo": "4F-20",
+      "floor": 4,
+      "roomType": "千级",
+      "cleanLevel": "II级(标准洁净)",
+      "fixedEquipments": [
+        "麻醉机",
+        "监护仪",
+        "无影灯",
+        "手术床",
+        "输液泵",
+        "注射泵",
+        "C臂机",
+        "腹腔镜系统",
+        "术中超声"
+      ],
+      "status": "手术中",
+      "isEmergency": false
+    },
+    {
+      "id": "OR0021",
+      "roomNo": "5F-21",
+      "floor": 5,
+      "roomType": "万级",
+      "cleanLevel": "III级(一般洁净)",
+      "fixedEquipments": [
+        "麻醉机",
+        "监护仪",
+        "无影灯",
+        "手术床",
+        "输液泵",
+        "注射泵",
+        "高频电刀",
+        "超声刀",
+        "自体血回输机"
+      ],
+      "status": "准备中",
+      "isEmergency": true
+    },
+    {
+      "id": "OR0022",
+      "roomNo": "5F-22",
+      "floor": 5,
+      "roomType": "万级",
+      "cleanLevel": "III级(一般洁净)",
+      "fixedEquipments": [
+        "麻醉机",
+        "监护仪",
+        "无影灯",
+        "手术床",
+        "输液泵",
+        "注射泵",
+        "高频电刀",
+        "超声刀",
+        "自体血回输机"
+      ],
+      "status": "准备中",
+      "isEmergency": false
+    },
+    {
+      "id": "OR0023",
+      "roomNo": "5F-23",
+      "floor": 5,
+      "roomType": "万级",
+      "cleanLevel": "III级(一般洁净)",
+      "fixedEquipments": [
+        "麻醉机",
+        "监护仪",
+        "无影灯",
+        "手术床",
+        "输液泵",
+        "注射泵",
+        "高频电刀",
+        "超声刀",
+        "自体血回输机"
+      ],
+      "status": "维护中",
+      "isEmergency": false
+    },
+    {
+      "id": "OR0024",
+      "roomNo": "5F-24",
+      "floor": 5,
+      "roomType": "万级",
+      "cleanLevel": "III级(一般洁净)",
+      "fixedEquipments": [
+        "麻醉机",
+        "监护仪",
+        "无影灯",
+        "手术床",
+        "输液泵",
+        "注射泵",
+        "高频电刀",
+        "超声刀",
+        "自体血回输机"
+      ],
+      "status": "手术中",
+      "isEmergency": false
+    },
+    {
+      "id": "OR0025",
+      "roomNo": "5F-25",
+      "floor": 5,
+      "roomType": "万级",
+      "cleanLevel": "III级(一般洁净)",
+      "fixedEquipments": [
+        "麻醉机",
+        "监护仪",
+        "无影灯",
+        "手术床",
+        "输液泵",
+        "注射泵",
+        "高频电刀",
+        "超声刀",
+        "自体血回输机"
+      ],
+      "status": "准备中",
+      "isEmergency": false
+    },
+    {
+      "id": "OR0026",
+      "roomNo": "5F-26",
+      "floor": 5,
+      "roomType": "万级",
+      "cleanLevel": "III级(一般洁净)",
+      "fixedEquipments": [
+        "麻醉机",
+        "监护仪",
+        "无影灯",
+        "手术床",
+        "输液泵",
+        "注射泵",
+        "高频电刀",
+        "超声刀",
+        "自体血回输机"
+      ],
+      "status": "维护中",
+      "isEmergency": false
+    },
+    {
+      "id": "OR0027",
+      "roomNo": "5F-27",
+      "floor": 5,
+      "roomType": "万级",
+      "cleanLevel": "III级(一般洁净)",
+      "fixedEquipments": [
+        "麻醉机",
+        "监护仪",
+        "无影灯",
+        "手术床",
+        "输液泵",
+        "注射泵",
+        "高频电刀",
+        "超声刀",
+        "自体血回输机"
+      ],
+      "status": "空闲",
+      "isEmergency": false
+    },
+    {
+      "id": "OR0028",
+      "roomNo": "5F-28",
+      "floor": 5,
+      "roomType": "万级",
+      "cleanLevel": "III级(一般洁净)",
+      "fixedEquipments": [
+        "麻醉机",
+        "监护仪",
+        "无影灯",
+        "手术床",
+        "输液泵",
+        "注射泵",
+        "高频电刀",
+        "超声刀",
+        "自体血回输机"
+      ],
+      "status": "空闲",
+      "isEmergency": false
+    },
+    {
+      "id": "OR0029",
+      "roomNo": "5F-29",
+      "floor": 5,
+      "roomType": "万级",
+      "cleanLevel": "III级(一般洁净)",
+      "fixedEquipments": [
+        "麻醉机",
+        "监护仪",
+        "无影灯",
+        "手术床",
+        "输液泵",
+        "注射泵",
+        "高频电刀",
+        "超声刀",
+        "自体血回输机"
+      ],
+      "status": "空闲",
+      "isEmergency": false
+    },
+    {
+      "id": "OR0030",
+      "roomNo": "5F-30",
+      "floor": 5,
+      "roomType": "万级",
+      "cleanLevel": "III级(一般洁净)",
+      "fixedEquipments": [
+        "麻醉机",
+        "监护仪",
+        "无影灯",
+        "手术床",
+        "输液泵",
+        "注射泵",
+        "高频电刀",
+        "超声刀",
+        "自体血回输机"
+      ],
+      "status": "手术中",
+      "isEmergency": false
+    },
+    {
+      "id": "OR0031",
+      "roomNo": "6F-31",
+      "floor": 6,
+      "roomType": "万级",
+      "cleanLevel": "III级(一般洁净)",
+      "fixedEquipments": [
+        "麻醉机",
+        "监护仪",
+        "无影灯",
+        "手术床",
+        "输液泵",
+        "注射泵",
+        "高频电刀",
+        "超声刀",
+        "自体血回输机"
+      ],
+      "status": "手术中",
+      "isEmergency": true
+    },
+    {
+      "id": "OR0032",
+      "roomNo": "6F-32",
+      "floor": 6,
+      "roomType": "万级",
+      "cleanLevel": "III级(一般洁净)",
+      "fixedEquipments": [
+        "麻醉机",
+        "监护仪",
+        "无影灯",
+        "手术床",
+        "输液泵",
+        "注射泵",
+        "高频电刀",
+        "超声刀",
+        "自体血回输机"
+      ],
+      "status": "维护中",
+      "isEmergency": false
+    },
+    {
+      "id": "OR0033",
+      "roomNo": "6F-33",
+      "floor": 6,
+      "roomType": "十万级",
+      "cleanLevel": "IV级(准洁净)",
+      "fixedEquipments": [
+        "麻醉机",
+        "监护仪",
+        "无影灯",
+        "手术床",
+        "输液泵",
+        "注射泵",
+        "普通手术床",
+        "无影灯",
+        "激光治疗仪"
+      ],
+      "status": "准备中",
+      "isEmergency": false
+    },
+    {
+      "id": "OR0034",
+      "roomNo": "6F-34",
+      "floor": 6,
+      "roomType": "十万级",
+      "cleanLevel": "IV级(准洁净)",
+      "fixedEquipments": [
+        "麻醉机",
+        "监护仪",
+        "无影灯",
+        "手术床",
+        "输液泵",
+        "注射泵",
+        "普通手术床",
+        "无影灯",
+        "激光治疗仪"
+      ],
+      "status": "空闲",
+      "isEmergency": false
+    },
+    {
+      "id": "OR0035",
+      "roomNo": "6F-35",
+      "floor": 6,
+      "roomType": "十万级",
+      "cleanLevel": "IV级(准洁净)",
+      "fixedEquipments": [
+        "麻醉机",
+        "监护仪",
+        "无影灯",
+        "手术床",
+        "输液泵",
+        "注射泵",
+        "普通手术床",
+        "无影灯",
+        "激光治疗仪"
+      ],
+      "status": "空闲",
+      "isEmergency": false
+    },
+    {
+      "id": "OR0036",
+      "roomNo": "6F-36",
+      "floor": 6,
+      "roomType": "十万级",
+      "cleanLevel": "IV级(准洁净)",
+      "fixedEquipments": [
+        "麻醉机",
+        "监护仪",
+        "无影灯",
+        "手术床",
+        "输液泵",
+        "注射泵",
+        "普通手术床",
+        "无影灯",
+        "激光治疗仪"
+      ],
+      "status": "手术中",
+      "isEmergency": false
+    },
+    {
+      "id": "OR0037",
+      "roomNo": "6F-37",
+      "floor": 6,
+      "roomType": "十万级",
+      "cleanLevel": "IV级(准洁净)",
+      "fixedEquipments": [
+        "麻醉机",
+        "监护仪",
+        "无影灯",
+        "手术床",
+        "输液泵",
+        "注射泵",
+        "普通手术床",
+        "无影灯",
+        "激光治疗仪"
+      ],
+      "status": "维护中",
+      "isEmergency": false
+    },
+    {
+      "id": "OR0038",
+      "roomNo": "6F-38",
+      "floor": 6,
+      "roomType": "十万级",
+      "cleanLevel": "IV级(准洁净)",
+      "fixedEquipments": [
+        "麻醉机",
+        "监护仪",
+        "无影灯",
+        "手术床",
+        "输液泵",
+        "注射泵",
+        "普通手术床",
+        "无影灯",
+        "激光治疗仪"
+      ],
+      "status": "准备中",
+      "isEmergency": false
+    },
+    {
+      "id": "OR0039",
+      "roomNo": "6F-39",
+      "floor": 6,
+      "roomType": "十万级",
+      "cleanLevel": "IV级(准洁净)",
+      "fixedEquipments": [
+        "麻醉机",
+        "监护仪",
+        "无影灯",
+        "手术床",
+        "输液泵",
+        "注射泵",
+        "普通手术床",
+        "无影灯",
+        "激光治疗仪"
+      ],
+      "status": "维护中",
+      "isEmergency": false
+    },
+    {
+      "id": "OR0040",
+      "roomNo": "6F-40",
+      "floor": 6,
+      "roomType": "十万级",
+      "cleanLevel": "IV级(准洁净)",
+      "fixedEquipments": [
+        "麻醉机",
+        "监护仪",
+        "无影灯",
+        "手术床",
+        "输液泵",
+        "注射泵",
+        "普通手术床",
+        "无影灯",
+        "激光治疗仪"
+      ],
+      "status": "准备中",
+      "isEmergency": false
+    }
+  ],
+  "patients": [
+    {
+      "id": "PAT0018",
+      "name": "吴秀梅",
+      "gender": "男",
+      "age": 47,
+      "admissionNo": "261000018",
+      "bedNo": "1502",
+      "ward": "8病区",
+      "asaGrade": "II",
+      "diagnosis": "角膜病变",
+      "allergies": "无",
+      "comorbidities": [],
+      "weight": 87,
+      "height": 189,
+      "bmi": 24.4,
+      "bloodType": "O型 Rh+",
+      "status": "术后恢复",
+      "admissionTime": "2026-10-21 00:00:00",
+      "transferInTime": "2026-10-21 07:00:00",
+      "transferOutTime": "2026-10-21 09:55:00",
+      "recoveryStartTime": "2026-10-21 09:50:00",
+      "recoveryEndTime": "2026-10-21 10:49:00",
+      "pacuRoomNo": "PACU-05",
+      "plannedRecoveryStartTime": "2026-10-21 09:38:00",
+      "plannedRecoveryEndTime": "2026-10-21 10:31:00",
+      "recoveryBedNo": "PACU-05-B02",
+      "vitalSigns": [
+        {
+          "time": "2026-10-21 07:34:00",
+          "timeMin": 454,
+          "hr": 79,
+          "bpSys": 131,
+          "bpDia": 78,
+          "spo2": 96.7,
+          "temp": 36.6,
+          "isAbnormal": false
+        },
+        {
+          "time": "2026-10-21 07:39:00",
+          "timeMin": 459,
+          "hr": 80,
+          "bpSys": 126,
+          "bpDia": 78,
+          "spo2": 96.6,
+          "temp": 36.4,
+          "isAbnormal": false
+        },
+        {
+          "time": "2026-10-21 07:44:00",
+          "timeMin": 464,
+          "hr": 76,
+          "bpSys": 130,
+          "bpDia": 82,
+          "spo2": 96.4,
+          "temp": 36.4,
+          "isAbnormal": false
+        },
+        {
+          "time": "2026-10-21 07:49:00",
+          "timeMin": 469,
+          "hr": 73,
+          "bpSys": 131,
+          "bpDia": 83,
+          "spo2": 97.8,
+          "temp": 36.6,
+          "isAbnormal": false
+        },
+        {
+          "time": "2026-10-21 07:54:00",
+          "timeMin": 474,
+          "hr": 76,
+          "bpSys": 126,
+          "bpDia": 76,
+          "spo2": 97.8,
+          "temp": 36.4,
+          "isAbnormal": false
+        },
+        {
+          "time": "2026-10-21 07:59:00",
+          "timeMin": 479,
+          "hr": 81,
+          "bpSys": 131,
+          "bpDia": 84,
+          "spo2": 97.9,
+          "temp": 36.4,
+          "isAbnormal": false
+        },
+        {
+          "time": "2026-10-21 08:04:00",
+          "timeMin": 484,
+          "hr": 74,
+          "bpSys": 129,
+          "bpDia": 83,
+          "spo2": 97.6,
+          "temp": 36.4,
+          "isAbnormal": false
+        },
+        {
+          "time": "2026-10-21 08:09:00",
+          "timeMin": 489,
+          "hr": 80,
+          "bpSys": 132,
+          "bpDia": 80,
+          "spo2": 97.2,
+          "temp": 36.5,
+          "isAbnormal": false
+        },
+        {
+          "time": "2026-10-21 08:14:00",
+          "timeMin": 494,
+          "hr": 74,
+          "bpSys": 124,
+          "bpDia": 78,
+          "spo2": 97.9,
+          "temp": 36.6,
+          "isAbnormal": false
+        },
+        {
+          "time": "2026-10-21 08:19:00",
+          "timeMin": 499,
+          "hr": 73,
+          "bpSys": 131,
+          "bpDia": 81,
+          "spo2": 96.8,
+          "temp": 36.5,
+          "isAbnormal": false
+        },
+        {
+          "time": "2026-10-21 08:24:00",
+          "timeMin": 504,
+          "hr": 79,
+          "bpSys": 129,
+          "bpDia": 78,
+          "spo2": 97.4,
+          "temp": 36.5,
+          "isAbnormal": false
+        },
+        {
+          "time": "2026-10-21 08:29:00",
+          "timeMin": 509,
+          "hr": 116,
+          "bpSys": 133,
+          "bpDia": 83,
+          "spo2": 96.5,
+          "temp": 36.4,
+          "isAbnormal": true
+        },
+        {
+          "time": "2026-10-21 08:34:00",
+          "timeMin": 514,
+          "hr": 82,
+          "bpSys": 124,
+          "bpDia": 76,
+          "spo2": 96.6,
+          "temp": 36.5,
+          "isAbnormal": false
+        },
+        {
+          "time": "2026-10-21 08:39:00",
+          "timeMin": 519,
+          "hr": 74,
+          "bpSys": 128,
+          "bpDia": 78,
+          "spo2": 97.1,
+          "temp": 36.6,
+          "isAbnormal": false
+        },
+        {
+          "time": "2026-10-21 08:44:00",
+          "timeMin": 524,
+          "hr": 81,
+          "bpSys": 131,
+          "bpDia": 84,
+          "spo2": 97,
+          "temp": 36.5,
+          "isAbnormal": false
+        },
+        {
+          "time": "2026-10-21 08:49:00",
+          "timeMin": 529,
+          "hr": 84,
+          "bpSys": 127,
+          "bpDia": 78,
+          "spo2": 97.8,
+          "temp": 36.4,
+          "isAbnormal": false
+        },
+        {
+          "time": "2026-10-21 08:54:00",
+          "timeMin": 534,
+          "hr": 78,
+          "bpSys": 126,
+          "bpDia": 77,
+          "spo2": 97.5,
+          "temp": 36.5,
+          "isAbnormal": false
+        },
+        {
+          "time": "2026-10-21 08:59:00",
+          "timeMin": 539,
+          "hr": 76,
+          "bpSys": 130,
+          "bpDia": 83,
+          "spo2": 96.9,
+          "temp": 36.6,
+          "isAbnormal": false
+        },
+        {
+          "time": "2026-10-21 09:04:00",
+          "timeMin": 544,
+          "hr": 74,
+          "bpSys": 127,
+          "bpDia": 84,
+          "spo2": 96.8,
+          "temp": 36.5,
+          "isAbnormal": false
+        },
+        {
+          "time": "2026-10-21 09:09:00",
+          "timeMin": 549,
+          "hr": 82,
+          "bpSys": 126,
+          "bpDia": 81,
+          "spo2": 97.1,
+          "temp": 36.4,
+          "isAbnormal": false
+        },
+        {
+          "time": "2026-10-21 09:14:00",
+          "timeMin": 554,
+          "hr": 83,
+          "bpSys": 128,
+          "bpDia": 78,
+          "spo2": 96.5,
+          "temp": 36.5,
+          "isAbnormal": false
+        },
+        {
+          "time": "2026-10-21 09:19:00",
+          "timeMin": 559,
+          "hr": 83,
+          "bpSys": 133,
+          "bpDia": 78,
+          "spo2": 97.9,
+          "temp": 36.4,
+          "isAbnormal": false
+        },
+        {
+          "time": "2026-10-21 09:24:00",
+          "timeMin": 564,
+          "hr": 81,
+          "bpSys": 126,
+          "bpDia": 82,
+          "spo2": 96,
+          "temp": 36.4,
+          "isAbnormal": false
+        },
+        {
+          "time": "2026-10-21 09:29:00",
+          "timeMin": 569,
+          "hr": 78,
+          "bpSys": 126,
+          "bpDia": 79,
+          "spo2": 97.9,
+          "temp": 36.5,
+          "isAbnormal": false
+        },
+        {
+          "time": "2026-10-21 09:34:00",
+          "timeMin": 574,
+          "hr": 78,
+          "bpSys": 126,
+          "bpDia": 82,
+          "spo2": 97.1,
+          "temp": 36.4,
+          "isAbnormal": false
+        },
+        {
+          "time": "2026-10-21 09:39:00",
+          "timeMin": 579,
+          "hr": 78,
+          "bpSys": 127,
+          "bpDia": 80,
+          "spo2": 97.8,
+          "temp": 36.4,
+          "isAbnormal": false
+        }
+      ],
+      "vitalSignSource": "手术麻醉监护",
+      "vitalSignPhase": "最近术中记录",
+      "vitalSignUpdatedAt": "2026-10-21 09:39:00"
+    },
+    {
+      "id": "PAT0105",
+      "name": "许秀芳",
+      "gender": "男",
+      "age": 49,
+      "admissionNo": "261000105",
+      "bedNo": "1903",
+      "ward": "13病区",
+      "asaGrade": "II",
+      "diagnosis": "慢性扁桃体炎",
+      "allergies": "无",
+      "comorbidities": [
+        "冠心病"
+      ],
+      "weight": 58,
+      "height": 178,
+      "bmi": 18.3,
+      "bloodType": "B型 Rh+",
+      "status": "术后恢复",
+      "admissionTime": "2026-10-21 00:00:00",
+      "transferInTime": "2026-10-21 07:01:00",
+      "transferOutTime": "2026-10-21 08:42:00",
+      "recoveryStartTime": "2026-10-21 08:26:00",
+      "recoveryEndTime": "2026-10-21 09:30:00",
+      "pacuRoomNo": "PACU-05",
+      "plannedRecoveryStartTime": "2026-10-21 08:21:00",
+      "plannedRecoveryEndTime": "2026-10-21 09:34:00",
+      "recoveryBedNo": "PACU-05-B02",
+      "vitalSigns": [
+        {
+          "time": "2026-10-21 07:30:00",
+          "timeMin": 450,
+          "hr": 84,
+          "bpSys": 131,
+          "bpDia": 82,
+          "spo2": 97.2,
+          "temp": 36.6,
+          "isAbnormal": false
+        },
+        {
+          "time": "2026-10-21 07:35:00",
+          "timeMin": 455,
+          "hr": 78,
+          "bpSys": 129,
+          "bpDia": 84,
+          "spo2": 97.1,
+          "temp": 36.6,
+          "isAbnormal": false
+        },
+        {
+          "time": "2026-10-21 07:40:00",
+          "timeMin": 460,
+          "hr": 76,
+          "bpSys": 128,
+          "bpDia": 79,
+          "spo2": 96.7,
+          "temp": 36.6,
+          "isAbnormal": false
+        },
+        {
+          "time": "2026-10-21 07:45:00",
+          "timeMin": 465,
+          "hr": 80,
+          "bpSys": 129,
+          "bpDia": 81,
+          "spo2": 96.7,
+          "temp": 36.5,
+          "isAbnormal": false
+        },
+        {
+          "time": "2026-10-21 07:50:00",
+          "timeMin": 470,
+          "hr": 75,
+          "bpSys": 128,
+          "bpDia": 83,
+          "spo2": 96.8,
+          "temp": 36.5,
+          "isAbnormal": false
+        },
+        {
+          "time": "2026-10-21 07:55:00",
+          "timeMin": 475,
+          "hr": 77,
+          "bpSys": 126,
+          "bpDia": 83,
+          "spo2": 97.8,
+          "temp": 36.4,
+          "isAbnormal": false
+        },
+        {
+          "time": "2026-10-21 08:00:00",
+          "timeMin": 480,
+          "hr": 78,
+          "bpSys": 132,
+          "bpDia": 81,
+          "spo2": 97.6,
+          "temp": 36.4,
+          "isAbnormal": false
+        },
+        {
+          "time": "2026-10-21 08:05:00",
+          "timeMin": 485,
+          "hr": 77,
+          "bpSys": 132,
+          "bpDia": 81,
+          "spo2": 97.3,
+          "temp": 36.4,
+          "isAbnormal": false
+        },
+        {
+          "time": "2026-10-21 08:10:00",
+          "timeMin": 490,
+          "hr": 74,
+          "bpSys": 124,
+          "bpDia": 76,
+          "spo2": 96.8,
+          "temp": 36.5,
+          "isAbnormal": false
+        },
+        {
+          "time": "2026-10-21 08:15:00",
+          "timeMin": 495,
+          "hr": 79,
+          "bpSys": 128,
+          "bpDia": 81,
+          "spo2": 96.7,
+          "temp": 36.6,
+          "isAbnormal": false
+        }
+      ],
+      "vitalSignSource": "手术麻醉监护",
+      "vitalSignPhase": "最近术中记录",
+      "vitalSignUpdatedAt": "2026-10-21 08:15:00"
+    }
+  ],
+  "surgeries": [
+    {
+      "id": "OPR0001",
+      "surgeryNo": "SS0001",
+      "patientId": "PAT0105",
+      "patientName": "许秀芳",
+      "patientGender": "男",
+      "patientAge": 49,
+      "patientDiagnosis": "慢性扁桃体炎",
+      "asaGrade": "II",
+      "bmi": 18.3,
+      "comorbidities": [
+        "冠心病"
+      ],
+      "department": "耳鼻喉科",
+      "surgeryName": "鼻内镜手术",
+      "surgeryLevel": "I",
+      "isEmergency": false,
+      "priority": "普通",
+      "operatingRoomId": "OR0001",
+      "operatingRoomNo": "3F-01",
+      "medicalGroupId": "GRP0070",
+      "medicalGroupName": "头颈肿瘤组",
+      "surgeonId": "SUR0125",
+      "surgeonName": "宋国华",
+      "assistantId": "SUR0176",
+      "assistantName": "郑强",
+      "anesthesiologistId": "ANE0006",
+      "anesthesiologistName": "韩丽",
+      "anesthesiaType": "复合麻醉",
+      "circulatingNurseId": "CNS0053",
+      "circulatingNurseName": "郭秀萍",
+      "scrubNurseId": "SNS0057",
+      "scrubNurseName": "吕睿渊",
+      "position": "仰卧位",
+      "plannedStartTime": "07:30",
+      "plannedEndTime": "08:14",
+      "plannedDuration": 44,
+      "actualStartTime": "07:30",
+      "actualEndTime": "08:15",
+      "actualDuration": 45,
+      "startDeviation": 0,
+      "endDeviation": 1,
+      "status": "已完成",
+      "specialRequirements": "需特殊体位",
+      "notes": "",
+      "admissionTime": "2026-10-21 00:00:00",
+      "transferInTime": "2026-10-21 07:01:00",
+      "transferOutTime": "2026-10-21 08:42:00",
+      "plannedRecoveryStartTime": "2026-10-21 08:21:00",
+      "plannedRecoveryEndTime": "2026-10-21 09:34:00",
+      "recoveryStartTime": "2026-10-21 08:26:00",
+      "recoveryEndTime": "2026-10-21 09:30:00",
+      "recoveryProgressEndTime": "2026-10-21 09:30:00",
+      "recoveryBedNo": "PACU-05-B02",
+      "pacuRoomNo": "PACU-05",
+      "equipmentIds": [
+        "EQP0032"
+      ],
+      "equipmentNames": [
+        "高端手术显微镜 01号"
+      ],
+      "pacuRoomName": "复苏室05"
+    },
+    {
+      "id": "OPR0002",
+      "surgeryNo": "SS0002",
+      "patientId": "PAT0018",
+      "patientName": "吴秀梅",
+      "patientGender": "男",
+      "patientAge": 47,
+      "patientDiagnosis": "角膜病变",
+      "asaGrade": "II",
+      "bmi": 24.4,
+      "comorbidities": [],
+      "department": "眼科",
+      "surgeryName": "视网膜脱离修复术",
+      "surgeryLevel": "II",
+      "isEmergency": false,
+      "priority": "普通",
+      "operatingRoomId": "OR0002",
+      "operatingRoomNo": "3F-02",
+      "medicalGroupId": "GRP0059",
+      "medicalGroupName": "眼底病一组",
+      "surgeonId": "SUR0140",
+      "surgeonName": "孙建军",
+      "assistantId": "SUR0082",
+      "assistantName": "周秀兰",
+      "anesthesiologistId": "ANE0032",
+      "anesthesiologistName": "曾敏",
+      "anesthesiaType": "局部麻醉",
+      "circulatingNurseId": "CNS0006",
+      "circulatingNurseName": "梁艳",
+      "scrubNurseId": "SNS0055",
+      "scrubNurseName": "陈杰",
+      "position": "折刀位",
+      "plannedStartTime": "07:30",
+      "plannedEndTime": "09:31",
+      "plannedDuration": 121,
+      "actualStartTime": "07:34",
+      "actualEndTime": "09:40",
+      "actualDuration": 126,
+      "startDeviation": 4,
+      "endDeviation": 9,
+      "status": "已完成",
+      "specialRequirements": "无",
+      "notes": "",
+      "admissionTime": "2026-10-21 00:00:00",
+      "transferInTime": "2026-10-21 07:00:00",
+      "transferOutTime": "2026-10-21 09:55:00",
+      "plannedRecoveryStartTime": "2026-10-21 09:38:00",
+      "plannedRecoveryEndTime": "2026-10-21 10:31:00",
+      "recoveryStartTime": "2026-10-21 09:50:00",
+      "recoveryEndTime": "2026-10-21 10:49:00",
+      "recoveryProgressEndTime": "2026-10-21 10:49:00",
+      "recoveryBedNo": "PACU-05-B02",
+      "pacuRoomNo": "PACU-05",
+      "equipmentIds": [
+        "EQP0077"
+      ],
+      "equipmentNames": [
+        "眼科玻璃体切割系统 02号"
+      ],
+      "pacuRoomName": "复苏室05"
+    }
+  ],
+  "timelineEvents": [
+    {
+      "id": "EVT0001",
+      "surgeryId": "OPR0001",
+      "surgeryNo": "SS0001",
+      "nodeCode": "P1",
+      "nodeName": "入住病房",
+      "category": "术前",
+      "plannedTime": "2026-10-17 04:24",
+      "actualTime": "2026-10-17 04:24",
+      "deviation": 0,
+      "deviationText": "准时",
+      "status": "正常",
+      "operator": "郭秀萍",
+      "notes": ""
+    },
+    {
+      "id": "EVT0002",
+      "surgeryId": "OPR0001",
+      "surgeryNo": "SS0001",
+      "nodeCode": "P2",
+      "nodeName": "手术开单",
+      "category": "术前",
+      "plannedTime": "2026-10-17 08:55",
+      "actualTime": "2026-10-17 08:55",
+      "deviation": 0,
+      "deviationText": "准时",
+      "status": "正常",
+      "operator": "郭秀萍",
+      "notes": ""
+    },
+    {
+      "id": "EVT0003",
+      "surgeryId": "OPR0001",
+      "surgeryNo": "SS0001",
+      "nodeCode": "P3",
+      "nodeName": "术前评估",
+      "category": "术前",
+      "plannedTime": "2026-10-19 22:10",
+      "actualTime": "2026-10-19 22:10",
+      "deviation": 0,
+      "deviationText": "准时",
+      "status": "正常",
+      "operator": "韩丽",
+      "notes": ""
+    },
+    {
+      "id": "EVT0004",
+      "surgeryId": "OPR0001",
+      "surgeryNo": "SS0001",
+      "nodeCode": "P4",
+      "nodeName": "签订知情同意书",
+      "category": "术前",
+      "plannedTime": "2026-10-20 13:04",
+      "actualTime": "2026-10-20 13:04",
+      "deviation": 0,
+      "deviationText": "准时",
+      "status": "正常",
+      "operator": "宋国华/患者家属",
+      "notes": ""
+    },
+    {
+      "id": "EVT0005",
+      "surgeryId": "OPR0001",
+      "surgeryNo": "SS0001",
+      "nodeCode": "P5",
+      "nodeName": "术前医嘱",
+      "category": "术前",
+      "plannedTime": "2026-10-21 03:01",
+      "actualTime": "2026-10-21 03:01",
+      "deviation": 0,
+      "deviationText": "准时",
+      "status": "正常",
+      "operator": "郭秀萍",
+      "notes": ""
+    },
+    {
+      "id": "EVT0006",
+      "surgeryId": "OPR0001",
+      "surgeryNo": "SS0001",
+      "nodeCode": "P6",
+      "nodeName": "三方核查报告",
+      "category": "术前",
+      "plannedTime": "2026-10-21 06:21",
+      "actualTime": "2026-10-21 06:21",
+      "deviation": 0,
+      "deviationText": "准时",
+      "status": "正常",
+      "operator": "宋国华/韩丽/郭秀萍",
+      "notes": ""
+    },
+    {
+      "id": "EVT0007",
+      "surgeryId": "OPR0001",
+      "surgeryNo": "SS0001",
+      "nodeCode": "P7",
+      "nodeName": "术前准备",
+      "category": "术前",
+      "plannedTime": "2026-10-21 07:01",
+      "actualTime": "2026-10-21 07:01",
+      "deviation": 0,
+      "deviationText": "准时",
+      "status": "正常",
+      "operator": "郭秀萍",
+      "notes": ""
+    },
+    {
+      "id": "EVT0008",
+      "surgeryId": "OPR0001",
+      "surgeryNo": "SS0001",
+      "nodeCode": "T1",
+      "nodeName": "患者入手术室",
+      "category": "入室",
+      "plannedTime": "2026-10-21 07:00:00",
+      "actualTime": "2026-10-21 07:10:00",
+      "deviation": 10,
+      "deviationText": "延误10分钟",
+      "status": "轻微延误",
+      "operator": "郭秀萍",
+      "notes": ""
+    },
+    {
+      "id": "EVT0009",
+      "surgeryId": "OPR0001",
+      "surgeryNo": "SS0001",
+      "nodeCode": "T2",
+      "nodeName": "麻醉开始",
+      "category": "麻醉",
+      "plannedTime": "2026-10-21 07:15:00",
+      "actualTime": "2026-10-21 07:10:00",
+      "deviation": -5,
+      "deviationText": "提前5分钟",
+      "status": "正常",
+      "operator": "韩丽",
+      "notes": ""
+    },
+    {
+      "id": "EVT0010",
+      "surgeryId": "OPR0001",
+      "surgeryNo": "SS0001",
+      "nodeCode": "T3",
+      "nodeName": "手术开始",
+      "category": "手术",
+      "plannedTime": "2026-10-21 07:30:00",
+      "actualTime": "2026-10-21 07:30:00",
+      "deviation": 0,
+      "deviationText": "准时",
+      "status": "正常",
+      "operator": "宋国华",
+      "notes": ""
+    },
+    {
+      "id": "EVT0011",
+      "surgeryId": "OPR0001",
+      "surgeryNo": "SS0001",
+      "nodeCode": "T4",
+      "nodeName": "关键步骤开始",
+      "category": "手术",
+      "plannedTime": "2026-10-21 07:41:00",
+      "actualTime": "2026-10-21 07:41:00",
+      "deviation": 0,
+      "deviationText": "准时",
+      "status": "正常",
+      "operator": "宋国华",
+      "notes": ""
+    },
+    {
+      "id": "EVT0012",
+      "surgeryId": "OPR0001",
+      "surgeryNo": "SS0001",
+      "nodeCode": "T5",
+      "nodeName": "关键步骤结束",
+      "category": "手术",
+      "plannedTime": "2026-10-21 08:00:00",
+      "actualTime": "2026-10-21 08:01:00",
+      "deviation": 1,
+      "deviationText": "延误1分钟",
+      "status": "正常",
+      "operator": "宋国华",
+      "notes": ""
+    },
+    {
+      "id": "EVT0013",
+      "surgeryId": "OPR0001",
+      "surgeryNo": "SS0001",
+      "nodeCode": "T6",
+      "nodeName": "手术结束",
+      "category": "手术",
+      "plannedTime": "2026-10-21 08:14:00",
+      "actualTime": "2026-10-21 08:15:00",
+      "deviation": 1,
+      "deviationText": "延误1分钟",
+      "status": "正常",
+      "operator": "宋国华",
+      "notes": ""
+    },
+    {
+      "id": "EVT0014",
+      "surgeryId": "OPR0001",
+      "surgeryNo": "SS0001",
+      "nodeCode": "T7",
+      "nodeName": "麻醉结束",
+      "category": "麻醉",
+      "plannedTime": "2026-10-21 08:25:00",
+      "actualTime": "2026-10-21 08:29:00",
+      "deviation": 4,
+      "deviationText": "延误4分钟",
+      "status": "正常",
+      "operator": "韩丽",
+      "notes": ""
+    },
+    {
+      "id": "EVT0015",
+      "surgeryId": "OPR0001",
+      "surgeryNo": "SS0001",
+      "nodeCode": "T8",
+      "nodeName": "患者出手术室",
+      "category": "出室",
+      "plannedTime": "2026-10-21 08:36:00",
+      "actualTime": "2026-10-21 08:49:00",
+      "deviation": 13,
+      "deviationText": "延误13分钟",
+      "status": "明显延误",
+      "operator": "郭秀萍",
+      "notes": ""
+    },
+    {
+      "id": "EVT0016",
+      "surgeryId": "OPR0001",
+      "surgeryNo": "SS0001",
+      "nodeCode": "T9",
+      "nodeName": "器械清点开始",
+      "category": "清点",
+      "plannedTime": "2026-10-21 07:44:00",
+      "actualTime": "2026-10-21 08:01:00",
+      "deviation": 17,
+      "deviationText": "延误17分钟",
+      "status": "明显延误",
+      "operator": "吕睿渊",
+      "notes": ""
+    },
+    {
+      "id": "EVT0017",
+      "surgeryId": "OPR0001",
+      "surgeryNo": "SS0001",
+      "nodeCode": "T10",
+      "nodeName": "器械清点结束",
+      "category": "清点",
+      "plannedTime": "2026-10-21 08:08:00",
+      "actualTime": "2026-10-21 08:15:00",
+      "deviation": 7,
+      "deviationText": "延误7分钟",
+      "status": "轻微延误",
+      "operator": "吕睿渊",
+      "notes": ""
+    },
+    {
+      "id": "EVT0018",
+      "surgeryId": "OPR0001",
+      "surgeryNo": "SS0001",
+      "nodeCode": "T11",
+      "nodeName": "第一次安全核查",
+      "category": "核查",
+      "plannedTime": "2026-10-21 07:10:00",
+      "actualTime": "2026-10-21 07:10:00",
+      "deviation": 0,
+      "deviationText": "准时",
+      "status": "正常",
+      "operator": "宋国华/韩丽/郭秀萍",
+      "notes": ""
+    },
+    {
+      "id": "EVT0019",
+      "surgeryId": "OPR0001",
+      "surgeryNo": "SS0001",
+      "nodeCode": "T12",
+      "nodeName": "第二次安全核查",
+      "category": "核查",
+      "plannedTime": "2026-10-21 07:30:00",
+      "actualTime": "2026-10-21 07:30:00",
+      "deviation": 0,
+      "deviationText": "准时",
+      "status": "正常",
+      "operator": "宋国华/韩丽/郭秀萍",
+      "notes": ""
+    },
+    {
+      "id": "EVT0020",
+      "surgeryId": "OPR0001",
+      "surgeryNo": "SS0001",
+      "nodeCode": "T13",
+      "nodeName": "第三次安全核查",
+      "category": "核查",
+      "plannedTime": "2026-10-21 08:14:00",
+      "actualTime": "2026-10-21 08:15:00",
+      "deviation": 1,
+      "deviationText": "延误1分钟",
+      "status": "正常",
+      "operator": "宋国华/韩丽/郭秀萍",
+      "notes": ""
+    },
+    {
+      "id": "EVT0021",
+      "surgeryId": "OPR0001",
+      "surgeryNo": "SS0001",
+      "nodeCode": "T14",
+      "nodeName": "标本送检",
+      "category": "标本",
+      "plannedTime": "2026-10-21 08:14:00",
+      "actualTime": "2026-10-21 08:15:00",
+      "deviation": 1,
+      "deviationText": "延误1分钟",
+      "status": "正常",
+      "operator": "吕睿渊",
+      "notes": ""
+    },
+    {
+      "id": "EVT0022",
+      "surgeryId": "OPR0001",
+      "surgeryNo": "SS0001",
+      "nodeCode": "T15",
+      "nodeName": "交接完成",
+      "category": "交接",
+      "plannedTime": "2026-10-21 08:36:00",
+      "actualTime": "2026-10-21 08:49:00",
+      "deviation": 13,
+      "deviationText": "延误13分钟",
+      "status": "明显延误",
+      "operator": "郭秀萍",
+      "notes": ""
+    },
+    {
+      "id": "EVT0023",
+      "surgeryId": "OPR0001",
+      "surgeryNo": "SS0001",
+      "nodeCode": "T16",
+      "nodeName": "转运入手术室",
+      "category": "转运",
+      "plannedTime": "2026-10-21 06:47:00",
+      "actualTime": "2026-10-21 06:52:00",
+      "deviation": 5,
+      "deviationText": "延误5分钟",
+      "status": "正常",
+      "operator": "郭秀萍",
+      "notes": ""
+    },
+    {
+      "id": "EVT0024",
+      "surgeryId": "OPR0001",
+      "surgeryNo": "SS0001",
+      "nodeCode": "T17",
+      "nodeName": "转运至复苏室",
+      "category": "转运",
+      "plannedTime": "2026-10-21 08:34:00",
+      "actualTime": "2026-10-21 08:49:00",
+      "deviation": 15,
+      "deviationText": "延误15分钟",
+      "status": "明显延误",
+      "operator": "郭秀萍",
+      "notes": ""
+    },
+    {
+      "id": "EVT0025",
+      "surgeryId": "OPR0001",
+      "surgeryNo": "SS0001",
+      "nodeCode": "T18",
+      "nodeName": "复苏完成出复苏室",
+      "category": "复苏",
+      "plannedTime": "2026-10-21 09:07:00",
+      "actualTime": "2026-10-21 09:34:00",
+      "deviation": 27,
+      "deviationText": "延误27分钟",
+      "status": "严重延误",
+      "operator": "韩丽",
+      "notes": ""
+    },
+    {
+      "id": "EVT0026",
+      "surgeryId": "OPR0002",
+      "surgeryNo": "SS0002",
+      "nodeCode": "P1",
+      "nodeName": "入住病房",
+      "category": "术前",
+      "plannedTime": "2026-10-16 12:50",
+      "actualTime": "2026-10-16 12:50",
+      "deviation": 0,
+      "deviationText": "准时",
+      "status": "正常",
+      "operator": "梁艳",
+      "notes": ""
+    },
+    {
+      "id": "EVT0027",
+      "surgeryId": "OPR0002",
+      "surgeryNo": "SS0002",
+      "nodeCode": "P2",
+      "nodeName": "手术开单",
+      "category": "术前",
+      "plannedTime": "2026-10-16 23:56",
+      "actualTime": "2026-10-16 23:56",
+      "deviation": 0,
+      "deviationText": "准时",
+      "status": "正常",
+      "operator": "梁艳",
+      "notes": ""
+    },
+    {
+      "id": "EVT0028",
+      "surgeryId": "OPR0002",
+      "surgeryNo": "SS0002",
+      "nodeCode": "P3",
+      "nodeName": "术前评估",
+      "category": "术前",
+      "plannedTime": "2026-10-19 19:06",
+      "actualTime": "2026-10-19 19:06",
+      "deviation": 0,
+      "deviationText": "准时",
+      "status": "正常",
+      "operator": "曾敏",
+      "notes": ""
+    },
+    {
+      "id": "EVT0029",
+      "surgeryId": "OPR0002",
+      "surgeryNo": "SS0002",
+      "nodeCode": "P4",
+      "nodeName": "签订知情同意书",
+      "category": "术前",
+      "plannedTime": "2026-10-20 12:01",
+      "actualTime": "2026-10-20 12:01",
+      "deviation": 0,
+      "deviationText": "准时",
+      "status": "正常",
+      "operator": "孙建军/患者家属",
+      "notes": ""
+    },
+    {
+      "id": "EVT0030",
+      "surgeryId": "OPR0002",
+      "surgeryNo": "SS0002",
+      "nodeCode": "P5",
+      "nodeName": "术前医嘱",
+      "category": "术前",
+      "plannedTime": "2026-10-21 01:48",
+      "actualTime": "2026-10-21 01:48",
+      "deviation": 0,
+      "deviationText": "准时",
+      "status": "正常",
+      "operator": "梁艳",
+      "notes": ""
+    },
+    {
+      "id": "EVT0031",
+      "surgeryId": "OPR0002",
+      "surgeryNo": "SS0002",
+      "nodeCode": "P6",
+      "nodeName": "三方核查报告",
+      "category": "术前",
+      "plannedTime": "2026-10-21 06:26",
+      "actualTime": "2026-10-21 06:26",
+      "deviation": 0,
+      "deviationText": "准时",
+      "status": "正常",
+      "operator": "孙建军/曾敏/梁艳",
+      "notes": ""
+    },
+    {
+      "id": "EVT0032",
+      "surgeryId": "OPR0002",
+      "surgeryNo": "SS0002",
+      "nodeCode": "P7",
+      "nodeName": "术前准备",
+      "category": "术前",
+      "plannedTime": "2026-10-21 07:10",
+      "actualTime": "2026-10-21 07:10",
+      "deviation": 0,
+      "deviationText": "准时",
+      "status": "正常",
+      "operator": "梁艳",
+      "notes": ""
+    },
+    {
+      "id": "EVT0033",
+      "surgeryId": "OPR0002",
+      "surgeryNo": "SS0002",
+      "nodeCode": "T1",
+      "nodeName": "患者入手术室",
+      "category": "入室",
+      "plannedTime": "2026-10-21 07:00:00",
+      "actualTime": "2026-10-21 06:57:00",
+      "deviation": -3,
+      "deviationText": "提前3分钟",
+      "status": "正常",
+      "operator": "梁艳",
+      "notes": ""
+    },
+    {
+      "id": "EVT0034",
+      "surgeryId": "OPR0002",
+      "surgeryNo": "SS0002",
+      "nodeCode": "T2",
+      "nodeName": "麻醉开始",
+      "category": "麻醉",
+      "plannedTime": "2026-10-21 07:15:00",
+      "actualTime": "2026-10-21 07:16:00",
+      "deviation": 1,
+      "deviationText": "延误1分钟",
+      "status": "正常",
+      "operator": "曾敏",
+      "notes": ""
+    },
+    {
+      "id": "EVT0035",
+      "surgeryId": "OPR0002",
+      "surgeryNo": "SS0002",
+      "nodeCode": "T3",
+      "nodeName": "手术开始",
+      "category": "手术",
+      "plannedTime": "2026-10-21 07:30:00",
+      "actualTime": "2026-10-21 07:34:00",
+      "deviation": 4,
+      "deviationText": "延误4分钟",
+      "status": "正常",
+      "operator": "孙建军",
+      "notes": ""
+    },
+    {
+      "id": "EVT0036",
+      "surgeryId": "OPR0002",
+      "surgeryNo": "SS0002",
+      "nodeCode": "T4",
+      "nodeName": "关键步骤开始",
+      "category": "手术",
+      "plannedTime": "2026-10-21 08:00:00",
+      "actualTime": "2026-10-21 08:05:00",
+      "deviation": 5,
+      "deviationText": "延误5分钟",
+      "status": "正常",
+      "operator": "孙建军",
+      "notes": ""
+    },
+    {
+      "id": "EVT0037",
+      "surgeryId": "OPR0002",
+      "surgeryNo": "SS0002",
+      "nodeCode": "T5",
+      "nodeName": "关键步骤结束",
+      "category": "手术",
+      "plannedTime": "2026-10-21 08:54:00",
+      "actualTime": "2026-10-21 09:02:00",
+      "deviation": 8,
+      "deviationText": "延误8分钟",
+      "status": "轻微延误",
+      "operator": "孙建军",
+      "notes": ""
+    },
+    {
+      "id": "EVT0038",
+      "surgeryId": "OPR0002",
+      "surgeryNo": "SS0002",
+      "nodeCode": "T6",
+      "nodeName": "手术结束",
+      "category": "手术",
+      "plannedTime": "2026-10-21 09:31:00",
+      "actualTime": "2026-10-21 09:40:00",
+      "deviation": 9,
+      "deviationText": "延误9分钟",
+      "status": "轻微延误",
+      "operator": "孙建军",
+      "notes": ""
+    },
+    {
+      "id": "EVT0039",
+      "surgeryId": "OPR0002",
+      "surgeryNo": "SS0002",
+      "nodeCode": "T7",
+      "nodeName": "麻醉结束",
+      "category": "麻醉",
+      "plannedTime": "2026-10-21 09:41:00",
+      "actualTime": "2026-10-21 09:46:00",
+      "deviation": 5,
+      "deviationText": "延误5分钟",
+      "status": "正常",
+      "operator": "曾敏",
+      "notes": ""
+    },
+    {
+      "id": "EVT0040",
+      "surgeryId": "OPR0002",
+      "surgeryNo": "SS0002",
+      "nodeCode": "T8",
+      "nodeName": "患者出手术室",
+      "category": "出室",
+      "plannedTime": "2026-10-21 10:00:00",
+      "actualTime": "2026-10-21 10:06:00",
+      "deviation": 6,
+      "deviationText": "延误6分钟",
+      "status": "轻微延误",
+      "operator": "梁艳",
+      "notes": ""
+    },
+    {
+      "id": "EVT0041",
+      "surgeryId": "OPR0002",
+      "surgeryNo": "SS0002",
+      "nodeCode": "T9",
+      "nodeName": "器械清点开始",
+      "category": "清点",
+      "plannedTime": "2026-10-21 09:01:00",
+      "actualTime": "2026-10-21 09:10:00",
+      "deviation": 9,
+      "deviationText": "延误9分钟",
+      "status": "轻微延误",
+      "operator": "陈杰",
+      "notes": ""
+    },
+    {
+      "id": "EVT0042",
+      "surgeryId": "OPR0002",
+      "surgeryNo": "SS0002",
+      "nodeCode": "T10",
+      "nodeName": "器械清点结束",
+      "category": "清点",
+      "plannedTime": "2026-10-21 09:19:00",
+      "actualTime": "2026-10-21 09:26:00",
+      "deviation": 7,
+      "deviationText": "延误7分钟",
+      "status": "轻微延误",
+      "operator": "陈杰",
+      "notes": ""
+    },
+    {
+      "id": "EVT0043",
+      "surgeryId": "OPR0002",
+      "surgeryNo": "SS0002",
+      "nodeCode": "T11",
+      "nodeName": "第一次安全核查",
+      "category": "核查",
+      "plannedTime": "2026-10-21 07:10:00",
+      "actualTime": "2026-10-21 07:11:00",
+      "deviation": 1,
+      "deviationText": "延误1分钟",
+      "status": "正常",
+      "operator": "孙建军/曾敏/梁艳",
+      "notes": ""
+    },
+    {
+      "id": "EVT0044",
+      "surgeryId": "OPR0002",
+      "surgeryNo": "SS0002",
+      "nodeCode": "T12",
+      "nodeName": "第二次安全核查",
+      "category": "核查",
+      "plannedTime": "2026-10-21 07:30:00",
+      "actualTime": "2026-10-21 07:34:00",
+      "deviation": 4,
+      "deviationText": "延误4分钟",
+      "status": "正常",
+      "operator": "孙建军/曾敏/梁艳",
+      "notes": ""
+    },
+    {
+      "id": "EVT0045",
+      "surgeryId": "OPR0002",
+      "surgeryNo": "SS0002",
+      "nodeCode": "T13",
+      "nodeName": "第三次安全核查",
+      "category": "核查",
+      "plannedTime": "2026-10-21 09:31:00",
+      "actualTime": "2026-10-21 09:40:00",
+      "deviation": 9,
+      "deviationText": "延误9分钟",
+      "status": "轻微延误",
+      "operator": "孙建军/曾敏/梁艳",
+      "notes": ""
+    },
+    {
+      "id": "EVT0046",
+      "surgeryId": "OPR0002",
+      "surgeryNo": "SS0002",
+      "nodeCode": "T14",
+      "nodeName": "标本送检",
+      "category": "标本",
+      "plannedTime": "2026-10-21 09:31:00",
+      "actualTime": "2026-10-21 09:40:00",
+      "deviation": 9,
+      "deviationText": "延误9分钟",
+      "status": "轻微延误",
+      "operator": "陈杰",
+      "notes": ""
+    },
+    {
+      "id": "EVT0047",
+      "surgeryId": "OPR0002",
+      "surgeryNo": "SS0002",
+      "nodeCode": "T15",
+      "nodeName": "交接完成",
+      "category": "交接",
+      "plannedTime": "2026-10-21 10:00:00",
+      "actualTime": "2026-10-21 10:06:00",
+      "deviation": 6,
+      "deviationText": "延误6分钟",
+      "status": "轻微延误",
+      "operator": "梁艳",
+      "notes": ""
+    },
+    {
+      "id": "EVT0048",
+      "surgeryId": "OPR0002",
+      "surgeryNo": "SS0002",
+      "nodeCode": "T16",
+      "nodeName": "转运入手术室",
+      "category": "转运",
+      "plannedTime": "2026-10-21 06:40:00",
+      "actualTime": "2026-10-21 06:46:00",
+      "deviation": 6,
+      "deviationText": "延误6分钟",
+      "status": "轻微延误",
+      "operator": "梁艳",
+      "notes": ""
+    },
+    {
+      "id": "EVT0049",
+      "surgeryId": "OPR0002",
+      "surgeryNo": "SS0002",
+      "nodeCode": "T17",
+      "nodeName": "转运至复苏室",
+      "category": "转运",
+      "plannedTime": "2026-10-21 09:52:00",
+      "actualTime": "2026-10-21 10:06:00",
+      "deviation": 14,
+      "deviationText": "延误14分钟",
+      "status": "明显延误",
+      "operator": "梁艳",
+      "notes": ""
+    },
+    {
+      "id": "EVT0050",
+      "surgeryId": "OPR0002",
+      "surgeryNo": "SS0002",
+      "nodeCode": "T18",
+      "nodeName": "复苏完成出复苏室",
+      "category": "复苏",
+      "plannedTime": "2026-10-21 11:02:00",
+      "actualTime": "2026-10-21 10:36:00",
+      "deviation": -26,
+      "deviationText": "提前26分钟",
+      "status": "轻微延误",
+      "operator": "曾敏",
+      "notes": ""
+    }
+  ],
+  "safetyChecks": [
+    {
+      "id": "CHK0001",
+      "surgeryId": "OPR0001",
+      "surgeryNo": "SS0001",
+      "checkNo": 1,
+      "checkName": "第一次安全核查",
+      "checkPhase": "麻醉实施前",
+      "checkItems": [
+        {
+          "item": "患者身份确认",
+          "result": "已确认",
+          "checker": "韩丽"
+        },
+        {
+          "item": "手术部位标记",
+          "result": "已确认",
+          "checker": "韩丽"
+        },
+        {
+          "item": "手术方式确认",
+          "result": "已确认",
+          "checker": "韩丽"
+        },
+        {
+          "item": "麻醉安全检查",
+          "result": "已确认",
+          "checker": "韩丽"
+        },
+        {
+          "item": "过敏史确认",
+          "result": "已确认",
+          "checker": "韩丽"
+        },
+        {
+          "item": "植入物确认",
+          "result": "已确认",
+          "checker": "韩丽"
+        }
+      ],
+      "checkTime": "2026-10-21 07:10:00",
+      "result": "通过",
+      "checker": "韩丽",
+      "notes": ""
+    },
+    {
+      "id": "CHK0002",
+      "surgeryId": "OPR0001",
+      "surgeryNo": "SS0001",
+      "checkNo": 2,
+      "checkName": "第二次安全核查",
+      "checkPhase": "手术开始前",
+      "checkItems": [
+        {
+          "item": "患者身份确认",
+          "result": "已确认",
+          "checker": "宋国华"
+        },
+        {
+          "item": "手术部位确认",
+          "result": "已确认",
+          "checker": "宋国华"
+        },
+        {
+          "item": "手术方式确认",
+          "result": "已确认",
+          "checker": "宋国华"
+        },
+        {
+          "item": "术中用药确认",
+          "result": "已确认",
+          "checker": "宋国华"
+        },
+        {
+          "item": "术中物品清点",
+          "result": "已确认",
+          "checker": "宋国华"
+        },
+        {
+          "item": "影像资料确认",
+          "result": "已确认",
+          "checker": "宋国华"
+        }
+      ],
+      "checkTime": "2026-10-21 07:30:00",
+      "result": "通过",
+      "checker": "宋国华",
+      "notes": ""
+    },
+    {
+      "id": "CHK0003",
+      "surgeryId": "OPR0001",
+      "surgeryNo": "SS0001",
+      "checkNo": 3,
+      "checkName": "第三次安全核查",
+      "checkPhase": "患者离开前",
+      "checkItems": [
+        {
+          "item": "患者身份确认",
+          "result": "已确认",
+          "checker": "郭秀萍"
+        },
+        {
+          "item": "手术标本确认",
+          "result": "已确认",
+          "checker": "郭秀萍"
+        },
+        {
+          "item": "手术用物清点",
+          "result": "已确认",
+          "checker": "郭秀萍"
+        },
+        {
+          "item": "术后注意事项",
+          "result": "已确认",
+          "checker": "郭秀萍"
+        },
+        {
+          "item": "患者转出确认",
+          "result": "已确认",
+          "checker": "郭秀萍"
+        },
+        {
+          "item": "设备归位确认",
+          "result": "已确认",
+          "checker": "郭秀萍"
+        }
+      ],
+      "checkTime": "2026-10-21 08:15:00",
+      "result": "通过",
+      "checker": "郭秀萍",
+      "notes": ""
+    },
+    {
+      "id": "CHK0004",
+      "surgeryId": "OPR0002",
+      "surgeryNo": "SS0002",
+      "checkNo": 1,
+      "checkName": "第一次安全核查",
+      "checkPhase": "麻醉实施前",
+      "checkItems": [
+        {
+          "item": "患者身份确认",
+          "result": "已确认",
+          "checker": "曾敏"
+        },
+        {
+          "item": "手术部位标记",
+          "result": "已确认",
+          "checker": "曾敏"
+        },
+        {
+          "item": "手术方式确认",
+          "result": "已确认",
+          "checker": "曾敏"
+        },
+        {
+          "item": "麻醉安全检查",
+          "result": "已确认",
+          "checker": "曾敏"
+        },
+        {
+          "item": "过敏史确认",
+          "result": "已确认",
+          "checker": "曾敏"
+        },
+        {
+          "item": "植入物确认",
+          "result": "已确认",
+          "checker": "曾敏"
+        }
+      ],
+      "checkTime": "2026-10-21 07:14:00",
+      "result": "通过",
+      "checker": "曾敏",
+      "notes": ""
+    },
+    {
+      "id": "CHK0005",
+      "surgeryId": "OPR0002",
+      "surgeryNo": "SS0002",
+      "checkNo": 2,
+      "checkName": "第二次安全核查",
+      "checkPhase": "手术开始前",
+      "checkItems": [
+        {
+          "item": "患者身份确认",
+          "result": "已确认",
+          "checker": "孙建军"
+        },
+        {
+          "item": "手术部位确认",
+          "result": "已确认",
+          "checker": "孙建军"
+        },
+        {
+          "item": "手术方式确认",
+          "result": "已确认",
+          "checker": "孙建军"
+        },
+        {
+          "item": "术中用药确认",
+          "result": "已确认",
+          "checker": "孙建军"
+        },
+        {
+          "item": "术中物品清点",
+          "result": "已确认",
+          "checker": "孙建军"
+        },
+        {
+          "item": "影像资料确认",
+          "result": "已确认",
+          "checker": "孙建军"
+        }
+      ],
+      "checkTime": "2026-10-21 07:34:00",
+      "result": "通过",
+      "checker": "孙建军",
+      "notes": ""
+    },
+    {
+      "id": "CHK0006",
+      "surgeryId": "OPR0002",
+      "surgeryNo": "SS0002",
+      "checkNo": 3,
+      "checkName": "第三次安全核查",
+      "checkPhase": "患者离开前",
+      "checkItems": [
+        {
+          "item": "患者身份确认",
+          "result": "需关注",
+          "checker": "梁艳"
+        },
+        {
+          "item": "手术标本确认",
+          "result": "已确认",
+          "checker": "梁艳"
+        },
+        {
+          "item": "手术用物清点",
+          "result": "已确认",
+          "checker": "梁艳"
+        },
+        {
+          "item": "术后注意事项",
+          "result": "已确认",
+          "checker": "梁艳"
+        },
+        {
+          "item": "患者转出确认",
+          "result": "已确认",
+          "checker": "梁艳"
+        },
+        {
+          "item": "设备归位确认",
+          "result": "已确认",
+          "checker": "梁艳"
+        }
+      ],
+      "checkTime": "2026-10-21 09:40:00",
+      "result": "有异常",
+      "checker": "梁艳",
+      "notes": "需术后随访确认"
+    }
+  ],
+  "adverseEvents": [],
+  "handovers": [
+    {
+      "id": "HND0001",
+      "surgeryId": "OPR0001",
+      "surgeryNo": "SS0001",
+      "patientId": "PAT0105",
+      "patientName": "许秀芳",
+      "handoverNo": 1,
+      "handoverType": "入室交接",
+      "fromRole": "病房护士",
+      "toRole": "郭秀萍",
+      "handoverTime": "2026-10-21 07:00:00",
+      "content": "患者许秀芳由病房转入手术室，诊断：鼻内镜手术，已确认手术部位标识，术前准备完成，ASA分级已评估",
+      "patientStatus": "疼痛",
+      "skinStatus": "有瘀斑",
+      "pipelineStatus": "夹闭",
+      "drainageStatus": "无",
+      "handoverItems": [
+        "病历资料",
+        "影像资料",
+        "术中用药",
+        "标本",
+        "随身物品"
+      ],
+      "fromSigner": "病房护士",
+      "toSigner": "郭秀萍",
+      "notes": ""
+    },
+    {
+      "id": "HND0002",
+      "surgeryId": "OPR0001",
+      "surgeryNo": "SS0001",
+      "patientId": "PAT0105",
+      "patientName": "许秀芳",
+      "handoverNo": 2,
+      "handoverType": "出室交接",
+      "fromRole": "郭秀萍",
+      "toRole": "病房护士/恢复室护士",
+      "handoverTime": "2026-10-21 08:45:00",
+      "content": "手术结束，患者生命体征平稳，麻醉已醒/带管回病房，切口敷料干燥，引流管通畅，安全返回",
+      "patientStatus": "烦躁",
+      "skinStatus": "轻度压红",
+      "pipelineStatus": "已拔除",
+      "drainageStatus": "少量引流",
+      "handoverItems": [
+        "病历资料",
+        "影像资料",
+        "术中用药",
+        "标本",
+        "随身物品"
+      ],
+      "fromSigner": "郭秀萍",
+      "toSigner": "病房护士/恢复室护士",
+      "notes": ""
+    },
+    {
+      "id": "HND0003",
+      "surgeryId": "OPR0002",
+      "surgeryNo": "SS0002",
+      "patientId": "PAT0018",
+      "patientName": "吴秀梅",
+      "handoverNo": 1,
+      "handoverType": "入室交接",
+      "fromRole": "病房护士",
+      "toRole": "梁艳",
+      "handoverTime": "2026-10-21 07:04:00",
+      "content": "患者吴秀梅由病房转入手术室，诊断：视网膜脱离修复术，已确认手术部位标识，术前准备完成，ASA分级已评估",
+      "patientStatus": "疼痛",
+      "skinStatus": "有破损",
+      "pipelineStatus": "留置",
+      "drainageStatus": "无",
+      "handoverItems": [
+        "病历资料",
+        "影像资料",
+        "术中用药"
+      ],
+      "fromSigner": "病房护士",
+      "toSigner": "梁艳",
+      "notes": ""
+    },
+    {
+      "id": "HND0004",
+      "surgeryId": "OPR0002",
+      "surgeryNo": "SS0002",
+      "patientId": "PAT0018",
+      "patientName": "吴秀梅",
+      "handoverNo": 2,
+      "handoverType": "出室交接",
+      "fromRole": "梁艳",
+      "toRole": "病房护士/恢复室护士",
+      "handoverTime": "2026-10-21 10:10:00",
+      "content": "手术结束，患者生命体征平稳，麻醉已醒/带管回病房，切口敷料干燥，引流管通畅，安全返回",
+      "patientStatus": "嗜睡",
+      "skinStatus": "完好",
+      "pipelineStatus": "通畅",
+      "drainageStatus": "无引流",
+      "handoverItems": [
+        "病历资料",
+        "影像资料",
+        "术中用药",
+        "标本"
+      ],
+      "fromSigner": "梁艳",
+      "toSigner": "病房护士/恢复室护士",
+      "notes": ""
+    }
+  ],
+  "equipment": [
+    {
+      "id": "EQP0032",
+      "assetNo": "SB00032",
+      "name": "高端手术显微镜 01号",
+      "type": "高端手术显微镜",
+      "brand": "蔡司",
+      "model": "蔡司-348",
+      "serialNo": "SN664259",
+      "purchaseDate": "2020-04-01",
+      "location": "5F-22",
+      "status": "使用中",
+      "isCritical": true,
+      "departments": [
+        "神经外科",
+        "眼科",
+        "耳鼻喉科",
+        "口腔颌面外科"
+      ],
+      "lastMaintenance": "2026-08-19",
+      "nextMaintenance": "2026-12-29",
+      "usageCount": 364,
+      "scheduledMinutes": 654,
+      "utilizationRate": 75,
+      "scheduleIds": [
+        "EQS0001",
+        "EQS0057",
+        "EQS0101",
+        "EQS0129",
+        "EQS0155"
+      ],
+      "notes": ""
+    },
+    {
+      "id": "EQP0077",
+      "assetNo": "SB00077",
+      "name": "眼科玻璃体切割系统 02号",
+      "type": "眼科玻璃体切割系统",
+      "brand": "爱尔康",
+      "model": "爱尔康-337",
+      "serialNo": "SN881646",
+      "purchaseDate": "2019-05-01",
+      "location": "5F-25",
+      "status": "使用中",
+      "isCritical": true,
+      "departments": [
+        "眼科"
+      ],
+      "lastMaintenance": "2026-06-24",
+      "nextMaintenance": "2026-11-19",
+      "usageCount": 444,
+      "scheduledMinutes": 301,
+      "utilizationRate": 35,
+      "scheduleIds": [
+        "EQS0002",
+        "EQS0102"
+      ],
+      "notes": ""
+    }
+  ],
+  "equipmentSchedules": [
+    {
+      "id": "EQS0001",
+      "equipmentId": "EQP0032",
+      "equipmentName": "高端手术显微镜 01号",
+      "equipmentType": "高端手术显微镜",
+      "assetNo": "SB00032",
+      "surgeryId": "OPR0001",
+      "surgeryNo": "SS0001",
+      "surgeryName": "鼻内镜手术",
+      "patientName": "许秀芳",
+      "department": "耳鼻喉科",
+      "operatingRoomNo": "3F-01",
+      "plannedStartTime": "07:30",
+      "plannedEndTime": "08:29",
+      "actualStartTime": "07:30",
+      "actualEndTime": "08:30",
+      "status": "已完成"
+    },
+    {
+      "id": "EQS0002",
+      "equipmentId": "EQP0077",
+      "equipmentName": "眼科玻璃体切割系统 02号",
+      "equipmentType": "眼科玻璃体切割系统",
+      "assetNo": "SB00077",
+      "surgeryId": "OPR0002",
+      "surgeryNo": "SS0002",
+      "surgeryName": "视网膜脱离修复术",
+      "patientName": "吴秀梅",
+      "department": "眼科",
+      "operatingRoomNo": "3F-02",
+      "plannedStartTime": "07:30",
+      "plannedEndTime": "09:46",
+      "actualStartTime": "07:30",
+      "actualEndTime": "09:55",
+      "status": "已完成"
+    }
+  ],
+  "pacuBeds": [
+    {
+      "id": "BED0001",
+      "pacuRoomNo": "PACU-01",
+      "roomName": "复苏室01",
+      "focus": "常规肿瘤手术",
+      "bedNo": "B01",
+      "fullName": "PACU-01-B01",
+      "status": "占用",
+      "scheduleIds": [
+        "OPR0046",
+        "OPR0089"
+      ]
+    },
+    {
+      "id": "BED0002",
+      "pacuRoomNo": "PACU-01",
+      "roomName": "复苏室01",
+      "focus": "常规肿瘤手术",
+      "bedNo": "B02",
+      "fullName": "PACU-01-B02",
+      "status": "空闲",
+      "scheduleIds": [
+        "OPR0033",
+        "OPR0145"
+      ]
+    },
+    {
+      "id": "BED0003",
+      "pacuRoomNo": "PACU-01",
+      "roomName": "复苏室01",
+      "focus": "常规肿瘤手术",
+      "bedNo": "B03",
+      "fullName": "PACU-01-B03",
+      "status": "空闲",
+      "scheduleIds": [
+        "OPR0056",
+        "OPR0132"
+      ]
+    },
+    {
+      "id": "BED0004",
+      "pacuRoomNo": "PACU-01",
+      "roomName": "复苏室01",
+      "focus": "常规肿瘤手术",
+      "bedNo": "B04",
+      "fullName": "PACU-01-B04",
+      "status": "空闲",
+      "scheduleIds": [
+        "OPR0004",
+        "OPR0149"
+      ]
+    },
+    {
+      "id": "BED0005",
+      "pacuRoomNo": "PACU-01",
+      "roomName": "复苏室01",
+      "focus": "常规肿瘤手术",
+      "bedNo": "B05",
+      "fullName": "PACU-01-B05",
+      "status": "空闲",
+      "scheduleIds": [
+        "OPR0026"
+      ]
+    },
+    {
+      "id": "BED0006",
+      "pacuRoomNo": "PACU-01",
+      "roomName": "复苏室01",
+      "focus": "常规肿瘤手术",
+      "bedNo": "B06",
+      "fullName": "PACU-01-B06",
+      "status": "空闲",
+      "scheduleIds": [
+        "OPR0025"
+      ]
+    },
+    {
+      "id": "BED0007",
+      "pacuRoomNo": "PACU-01",
+      "roomName": "复苏室01",
+      "focus": "常规肿瘤手术",
+      "bedNo": "B07",
+      "fullName": "PACU-01-B07",
+      "status": "空闲",
+      "scheduleIds": [
+        "OPR0063",
+        "OPR0074"
+      ]
+    },
+    {
+      "id": "BED0008",
+      "pacuRoomNo": "PACU-01",
+      "roomName": "复苏室01",
+      "focus": "常规肿瘤手术",
+      "bedNo": "B08",
+      "fullName": "PACU-01-B08",
+      "status": "空闲",
+      "scheduleIds": [
+        "OPR0076"
+      ]
+    },
+    {
+      "id": "BED0009",
+      "pacuRoomNo": "PACU-01",
+      "roomName": "复苏室01",
+      "focus": "常规肿瘤手术",
+      "bedNo": "B09",
+      "fullName": "PACU-01-B09",
+      "status": "空闲",
+      "scheduleIds": [
+        "OPR0077"
+      ]
+    },
+    {
+      "id": "BED0010",
+      "pacuRoomNo": "PACU-01",
+      "roomName": "复苏室01",
+      "focus": "常规肿瘤手术",
+      "bedNo": "B10",
+      "fullName": "PACU-01-B10",
+      "status": "空闲",
+      "scheduleIds": [
+        "OPR0058"
+      ]
+    },
+    {
+      "id": "BED0011",
+      "pacuRoomNo": "PACU-02",
+      "roomName": "复苏室02",
+      "focus": "常规及日间手术",
+      "bedNo": "B01",
+      "fullName": "PACU-02-B01",
+      "status": "空闲",
+      "scheduleIds": [
+        "OPR0021",
+        "OPR0064"
+      ]
+    },
+    {
+      "id": "BED0012",
+      "pacuRoomNo": "PACU-02",
+      "roomName": "复苏室02",
+      "focus": "常规及日间手术",
+      "bedNo": "B02",
+      "fullName": "PACU-02-B02",
+      "status": "空闲",
+      "scheduleIds": [
+        "OPR0051",
+        "OPR0107"
+      ]
+    },
+    {
+      "id": "BED0013",
+      "pacuRoomNo": "PACU-02",
+      "roomName": "复苏室02",
+      "focus": "常规及日间手术",
+      "bedNo": "B03",
+      "fullName": "PACU-02-B03",
+      "status": "空闲",
+      "scheduleIds": [
+        "OPR0016",
+        "OPR0125"
+      ]
+    },
+    {
+      "id": "BED0014",
+      "pacuRoomNo": "PACU-02",
+      "roomName": "复苏室02",
+      "focus": "常规及日间手术",
+      "bedNo": "B04",
+      "fullName": "PACU-02-B04",
+      "status": "空闲",
+      "scheduleIds": [
+        "OPR0013",
+        "OPR0152"
+      ]
+    },
+    {
+      "id": "BED0015",
+      "pacuRoomNo": "PACU-02",
+      "roomName": "复苏室02",
+      "focus": "常规及日间手术",
+      "bedNo": "B05",
+      "fullName": "PACU-02-B05",
+      "status": "空闲",
+      "scheduleIds": [
+        "OPR0003"
+      ]
+    },
+    {
+      "id": "BED0016",
+      "pacuRoomNo": "PACU-02",
+      "roomName": "复苏室02",
+      "focus": "常规及日间手术",
+      "bedNo": "B06",
+      "fullName": "PACU-02-B06",
+      "status": "空闲",
+      "scheduleIds": [
+        "OPR0084"
+      ]
+    },
+    {
+      "id": "BED0017",
+      "pacuRoomNo": "PACU-02",
+      "roomName": "复苏室02",
+      "focus": "常规及日间手术",
+      "bedNo": "B07",
+      "fullName": "PACU-02-B07",
+      "status": "空闲",
+      "scheduleIds": [
+        "OPR0057"
+      ]
+    },
+    {
+      "id": "BED0018",
+      "pacuRoomNo": "PACU-02",
+      "roomName": "复苏室02",
+      "focus": "常规及日间手术",
+      "bedNo": "B08",
+      "fullName": "PACU-02-B08",
+      "status": "占用",
+      "scheduleIds": [
+        "OPR0066"
+      ]
+    },
+    {
+      "id": "BED0019",
+      "pacuRoomNo": "PACU-02",
+      "roomName": "复苏室02",
+      "focus": "常规及日间手术",
+      "bedNo": "B09",
+      "fullName": "PACU-02-B09",
+      "status": "空闲",
+      "scheduleIds": [
+        "OPR0136"
+      ]
+    },
+    {
+      "id": "BED0020",
+      "pacuRoomNo": "PACU-02",
+      "roomName": "复苏室02",
+      "focus": "常规及日间手术",
+      "bedNo": "B10",
+      "fullName": "PACU-02-B10",
+      "status": "占用",
+      "scheduleIds": [
+        "OPR0054"
+      ]
+    },
+    {
+      "id": "BED0021",
+      "pacuRoomNo": "PACU-03",
+      "roomName": "复苏室03",
+      "focus": "腔镜微创手术",
+      "bedNo": "B01",
+      "fullName": "PACU-03-B01",
+      "status": "占用",
+      "scheduleIds": [
+        "OPR0020",
+        "OPR0081",
+        "OPR0047",
+        "OPR0079",
+        "OPR0126",
+        "OPR0141"
+      ]
+    },
+    {
+      "id": "BED0022",
+      "pacuRoomNo": "PACU-03",
+      "roomName": "复苏室03",
+      "focus": "腔镜微创手术",
+      "bedNo": "B02",
+      "fullName": "PACU-03-B02",
+      "status": "占用",
+      "scheduleIds": [
+        "OPR0006",
+        "OPR0008",
+        "OPR0059",
+        "OPR0094",
+        "OPR0112",
+        "OPR0137",
+        "OPR0150"
+      ]
+    },
+    {
+      "id": "BED0023",
+      "pacuRoomNo": "PACU-03",
+      "roomName": "复苏室03",
+      "focus": "腔镜微创手术",
+      "bedNo": "B03",
+      "fullName": "PACU-03-B03",
+      "status": "空闲",
+      "scheduleIds": [
+        "OPR0041",
+        "OPR0043",
+        "OPR0106",
+        "OPR0062",
+        "OPR0073",
+        "OPR0130"
+      ]
+    },
+    {
+      "id": "BED0024",
+      "pacuRoomNo": "PACU-03",
+      "roomName": "复苏室03",
+      "focus": "腔镜微创手术",
+      "bedNo": "B04",
+      "fullName": "PACU-03-B04",
+      "status": "占用",
+      "scheduleIds": [
+        "OPR0022",
+        "OPR0019",
+        "OPR0092",
+        "OPR0087",
+        "OPR0099",
+        "OPR0122"
+      ]
+    },
+    {
+      "id": "BED0025",
+      "pacuRoomNo": "PACU-03",
+      "roomName": "复苏室03",
+      "focus": "腔镜微创手术",
+      "bedNo": "B05",
+      "fullName": "PACU-03-B05",
+      "status": "空闲",
+      "scheduleIds": [
+        "OPR0032",
+        "OPR0023",
+        "OPR0052",
+        "OPR0080",
+        "OPR0117",
+        "OPR0151"
+      ]
+    },
+    {
+      "id": "BED0026",
+      "pacuRoomNo": "PACU-03",
+      "roomName": "复苏室03",
+      "focus": "腔镜微创手术",
+      "bedNo": "B06",
+      "fullName": "PACU-03-B06",
+      "status": "占用",
+      "scheduleIds": [
+        "OPR0055",
+        "OPR0038",
+        "OPR0037",
+        "OPR0070",
+        "OPR0088",
+        "OPR0139",
+        "OPR0147"
+      ]
+    },
+    {
+      "id": "BED0027",
+      "pacuRoomNo": "PACU-03",
+      "roomName": "复苏室03",
+      "focus": "腔镜微创手术",
+      "bedNo": "B07",
+      "fullName": "PACU-03-B07",
+      "status": "占用",
+      "scheduleIds": [
+        "OPR0012",
+        "OPR0085",
+        "OPR0048",
+        "OPR0072",
+        "OPR0116",
+        "OPR0129"
+      ]
+    },
+    {
+      "id": "BED0028",
+      "pacuRoomNo": "PACU-03",
+      "roomName": "复苏室03",
+      "focus": "腔镜微创手术",
+      "bedNo": "B08",
+      "fullName": "PACU-03-B08",
+      "status": "空闲",
+      "scheduleIds": [
+        "OPR0036",
+        "OPR0018",
+        "OPR0045",
+        "OPR0101",
+        "OPR0127",
+        "OPR0148"
+      ]
+    },
+    {
+      "id": "BED0029",
+      "pacuRoomNo": "PACU-04",
+      "roomName": "复苏室04",
+      "focus": "达芬奇机器人手术",
+      "bedNo": "B01",
+      "fullName": "PACU-04-B01",
+      "status": "空闲",
+      "scheduleIds": [
+        "OPR0082",
+        "OPR0134"
+      ]
+    },
+    {
+      "id": "BED0030",
+      "pacuRoomNo": "PACU-04",
+      "roomName": "复苏室04",
+      "focus": "达芬奇机器人手术",
+      "bedNo": "B02",
+      "fullName": "PACU-04-B02",
+      "status": "空闲",
+      "scheduleIds": [
+        "OPR0024"
+      ]
+    },
+    {
+      "id": "BED0031",
+      "pacuRoomNo": "PACU-04",
+      "roomName": "复苏室04",
+      "focus": "达芬奇机器人手术",
+      "bedNo": "B03",
+      "fullName": "PACU-04-B03",
+      "status": "占用",
+      "scheduleIds": [
+        "OPR0154"
+      ]
+    },
+    {
+      "id": "BED0032",
+      "pacuRoomNo": "PACU-04",
+      "roomName": "复苏室04",
+      "focus": "达芬奇机器人手术",
+      "bedNo": "B04",
+      "fullName": "PACU-04-B04",
+      "status": "空闲",
+      "scheduleIds": [
+        "OPR0102"
+      ]
+    },
+    {
+      "id": "BED0033",
+      "pacuRoomNo": "PACU-04",
+      "roomName": "复苏室04",
+      "focus": "达芬奇机器人手术",
+      "bedNo": "B05",
+      "fullName": "PACU-04-B05",
+      "status": "空闲",
+      "scheduleIds": [
+        "OPR0111"
+      ]
+    },
+    {
+      "id": "BED0034",
+      "pacuRoomNo": "PACU-04",
+      "roomName": "复苏室04",
+      "focus": "达芬奇机器人手术",
+      "bedNo": "B06",
+      "fullName": "PACU-04-B06",
+      "status": "空闲",
+      "scheduleIds": [
+        "OPR0108"
+      ]
+    },
+    {
+      "id": "BED0035",
+      "pacuRoomNo": "PACU-04",
+      "roomName": "复苏室04",
+      "focus": "达芬奇机器人手术",
+      "bedNo": "B07",
+      "fullName": "PACU-04-B07",
+      "status": "空闲",
+      "scheduleIds": [
+        "OPR0115"
+      ]
+    },
+    {
+      "id": "BED0036",
+      "pacuRoomNo": "PACU-04",
+      "roomName": "复苏室04",
+      "focus": "达芬奇机器人手术",
+      "bedNo": "B08",
+      "fullName": "PACU-04-B08",
+      "status": "空闲",
+      "scheduleIds": [
+        "OPR0105"
+      ]
+    },
+    {
+      "id": "BED0037",
+      "pacuRoomNo": "PACU-05",
+      "roomName": "复苏室05",
+      "focus": "神经、头颈及眼科手术",
+      "bedNo": "B01",
+      "fullName": "PACU-05-B01",
+      "status": "占用",
+      "scheduleIds": [
+        "OPR0049",
+        "OPR0005",
+        "OPR0040",
+        "OPR0119",
+        "OPR0110",
+        "OPR0135",
+        "OPR0142"
+      ]
+    },
+    {
+      "id": "BED0038",
+      "pacuRoomNo": "PACU-05",
+      "roomName": "复苏室05",
+      "focus": "神经、头颈及眼科手术",
+      "bedNo": "B02",
+      "fullName": "PACU-05-B02",
+      "status": "占用",
+      "scheduleIds": [
+        "OPR0001",
+        "OPR0002",
+        "OPR0050",
+        "OPR0039",
+        "OPR0068",
+        "OPR0075",
+        "OPR0140"
+      ]
+    },
+    {
+      "id": "BED0039",
+      "pacuRoomNo": "PACU-05",
+      "roomName": "复苏室05",
+      "focus": "神经、头颈及眼科手术",
+      "bedNo": "B03",
+      "fullName": "PACU-05-B03",
+      "status": "待接收",
+      "scheduleIds": [
+        "OPR0028",
+        "OPR0069",
+        "OPR0103",
+        "OPR0138",
+        "OPR0093",
+        "OPR0113",
+        "OPR0146"
+      ]
+    },
+    {
+      "id": "BED0040",
+      "pacuRoomNo": "PACU-05",
+      "roomName": "复苏室05",
+      "focus": "神经、头颈及眼科手术",
+      "bedNo": "B04",
+      "fullName": "PACU-05-B04",
+      "status": "空闲",
+      "scheduleIds": [
+        "OPR0044",
+        "OPR0009",
+        "OPR0118",
+        "OPR0086",
+        "OPR0114",
+        "OPR0109",
+        "OPR0153"
+      ]
+    },
+    {
+      "id": "BED0041",
+      "pacuRoomNo": "PACU-05",
+      "roomName": "复苏室05",
+      "focus": "神经、头颈及眼科手术",
+      "bedNo": "B05",
+      "fullName": "PACU-05-B05",
+      "status": "占用",
+      "scheduleIds": [
+        "OPR0029",
+        "OPR0083",
+        "OPR0124",
+        "OPR0065",
+        "OPR0100",
+        "OPR0131"
+      ]
+    },
+    {
+      "id": "BED0042",
+      "pacuRoomNo": "PACU-05",
+      "roomName": "复苏室05",
+      "focus": "神经、头颈及眼科手术",
+      "bedNo": "B06",
+      "fullName": "PACU-05-B06",
+      "status": "清洁中",
+      "scheduleIds": [
+        "OPR0035",
+        "OPR0017",
+        "OPR0030",
+        "OPR0061",
+        "OPR0098",
+        "OPR0120",
+        "OPR0123"
+      ]
+    },
+    {
+      "id": "BED0043",
+      "pacuRoomNo": "PACU-05",
+      "roomName": "复苏室05",
+      "focus": "神经、头颈及眼科手术",
+      "bedNo": "B07",
+      "fullName": "PACU-05-B07",
+      "status": "待接收",
+      "scheduleIds": [
+        "OPR0060",
+        "OPR0031",
+        "OPR0067",
+        "OPR0096",
+        "OPR0128",
+        "OPR0144"
+      ]
+    },
+    {
+      "id": "BED0044",
+      "pacuRoomNo": "PACU-05",
+      "roomName": "复苏室05",
+      "focus": "神经、头颈及眼科手术",
+      "bedNo": "B08",
+      "fullName": "PACU-05-B08",
+      "status": "待接收",
+      "scheduleIds": [
+        "OPR0010",
+        "OPR0007",
+        "OPR0053",
+        "OPR0095",
+        "OPR0104",
+        "OPR0143"
+      ]
+    },
+    {
+      "id": "BED0045",
+      "pacuRoomNo": "PACU-06",
+      "roomName": "复苏室06",
+      "focus": "四级手术及ASA III级以上",
+      "bedNo": "B01",
+      "fullName": "PACU-06-B01",
+      "status": "空闲",
+      "scheduleIds": [
+        "OPR0015",
+        "OPR0097"
+      ]
+    },
+    {
+      "id": "BED0046",
+      "pacuRoomNo": "PACU-06",
+      "roomName": "复苏室06",
+      "focus": "四级手术及ASA III级以上",
+      "bedNo": "B02",
+      "fullName": "PACU-06-B02",
+      "status": "空闲",
+      "scheduleIds": [
+        "OPR0034",
+        "OPR0042"
+      ]
+    },
+    {
+      "id": "BED0047",
+      "pacuRoomNo": "PACU-06",
+      "roomName": "复苏室06",
+      "focus": "四级手术及ASA III级以上",
+      "bedNo": "B03",
+      "fullName": "PACU-06-B03",
+      "status": "空闲",
+      "scheduleIds": [
+        "OPR0071",
+        "OPR0133"
+      ]
+    },
+    {
+      "id": "BED0048",
+      "pacuRoomNo": "PACU-06",
+      "roomName": "复苏室06",
+      "focus": "四级手术及ASA III级以上",
+      "bedNo": "B04",
+      "fullName": "PACU-06-B04",
+      "status": "占用",
+      "scheduleIds": [
+        "OPR0027",
+        "OPR0078"
+      ]
+    },
+    {
+      "id": "BED0049",
+      "pacuRoomNo": "PACU-06",
+      "roomName": "复苏室06",
+      "focus": "四级手术及ASA III级以上",
+      "bedNo": "B05",
+      "fullName": "PACU-06-B05",
+      "status": "空闲",
+      "scheduleIds": [
+        "OPR0011"
+      ]
+    },
+    {
+      "id": "BED0050",
+      "pacuRoomNo": "PACU-06",
+      "roomName": "复苏室06",
+      "focus": "四级手术及ASA III级以上",
+      "bedNo": "B06",
+      "fullName": "PACU-06-B06",
+      "status": "空闲",
+      "scheduleIds": [
+        "OPR0090",
+        "OPR0121"
+      ]
+    },
+    {
+      "id": "BED0051",
+      "pacuRoomNo": "PACU-06",
+      "roomName": "复苏室06",
+      "focus": "四级手术及ASA III级以上",
+      "bedNo": "B07",
+      "fullName": "PACU-06-B07",
+      "status": "空闲",
+      "scheduleIds": [
+        "OPR0091"
+      ]
+    },
+    {
+      "id": "BED0052",
+      "pacuRoomNo": "PACU-06",
+      "roomName": "复苏室06",
+      "focus": "四级手术及ASA III级以上",
+      "bedNo": "B08",
+      "fullName": "PACU-06-B08",
+      "status": "空闲",
+      "scheduleIds": [
+        "OPR0014"
+      ]
+    }
+  ],
+  "statistics": {
+    "date": "2026-10-21",
+    "totalSurgeries": 154,
+    "completedSurgeries": 90,
+    "inProgressSurgeries": 27,
+    "pendingSurgeries": 37,
+    "cancelledSurgeries": 0,
+    "emergencySurgeries": 19,
+    "completionRate": "58.4",
+    "onTimeRate": "74.0",
+    "adverseEventCount": 2,
+    "adverseEventRate": "1.30",
+    "surgeryLevelStats": {
+      "I": 41,
+      "II": 77,
+      "III": 29,
+      "IV": 7
+    },
+    "departmentStats": {
+      "普外科": 18,
+      "骨科": 8,
+      "神经外科": 22,
+      "心胸外科": 16,
+      "泌尿外科": 14,
+      "妇科": 20,
+      "产科": 11,
+      "眼科": 15,
+      "耳鼻喉科": 13,
+      "口腔颌面外科": 17
+    },
+    "roomUtilization": [
+      {
+        "roomNo": "3F-01",
+        "count": 4,
+        "totalDuration": 837,
+        "emergencyCount": 1
+      },
+      {
+        "roomNo": "3F-02",
+        "count": 4,
+        "totalDuration": 719,
+        "emergencyCount": 0
+      },
+      {
+        "roomNo": "3F-03",
+        "count": 4,
+        "totalDuration": 722,
+        "emergencyCount": 0
+      },
+      {
+        "roomNo": "3F-04",
+        "count": 4,
+        "totalDuration": 634,
+        "emergencyCount": 0
+      },
+      {
+        "roomNo": "3F-05",
+        "count": 4,
+        "totalDuration": 685,
+        "emergencyCount": 1
+      },
+      {
+        "roomNo": "3F-06",
+        "count": 4,
+        "totalDuration": 669,
+        "emergencyCount": 0
+      },
+      {
+        "roomNo": "3F-07",
+        "count": 4,
+        "totalDuration": 524,
+        "emergencyCount": 0
+      },
+      {
+        "roomNo": "3F-08",
+        "count": 3,
+        "totalDuration": 761,
+        "emergencyCount": 0
+      },
+      {
+        "roomNo": "3F-09",
+        "count": 4,
+        "totalDuration": 619,
+        "emergencyCount": 0
+      },
+      {
+        "roomNo": "3F-10",
+        "count": 4,
+        "totalDuration": 688,
+        "emergencyCount": 0
+      },
+      {
+        "roomNo": "4F-11",
+        "count": 4,
+        "totalDuration": 584,
+        "emergencyCount": 1
+      },
+      {
+        "roomNo": "4F-12",
+        "count": 4,
+        "totalDuration": 676,
+        "emergencyCount": 0
+      },
+      {
+        "roomNo": "4F-13",
+        "count": 4,
+        "totalDuration": 559,
+        "emergencyCount": 0
+      },
+      {
+        "roomNo": "4F-15",
+        "count": 4,
+        "totalDuration": 494,
+        "emergencyCount": 1
+      },
+      {
+        "roomNo": "4F-14",
+        "count": 4,
+        "totalDuration": 516,
+        "emergencyCount": 1
+      },
+      {
+        "roomNo": "4F-16",
+        "count": 4,
+        "totalDuration": 808,
+        "emergencyCount": 0
+      },
+      {
+        "roomNo": "4F-17",
+        "count": 4,
+        "totalDuration": 716,
+        "emergencyCount": 0
+      },
+      {
+        "roomNo": "4F-19",
+        "count": 4,
+        "totalDuration": 463,
+        "emergencyCount": 1
+      },
+      {
+        "roomNo": "4F-18",
+        "count": 4,
+        "totalDuration": 445,
+        "emergencyCount": 2
+      },
+      {
+        "roomNo": "4F-20",
+        "count": 4,
+        "totalDuration": 413,
+        "emergencyCount": 0
+      },
+      {
+        "roomNo": "5F-21",
+        "count": 4,
+        "totalDuration": 427,
+        "emergencyCount": 1
+      },
+      {
+        "roomNo": "5F-22",
+        "count": 4,
+        "totalDuration": 424,
+        "emergencyCount": 0
+      },
+      {
+        "roomNo": "5F-23",
+        "count": 4,
+        "totalDuration": 490,
+        "emergencyCount": 1
+      },
+      {
+        "roomNo": "5F-24",
+        "count": 4,
+        "totalDuration": 392,
+        "emergencyCount": 1
+      },
+      {
+        "roomNo": "5F-28",
+        "count": 4,
+        "totalDuration": 535,
+        "emergencyCount": 2
+      },
+      {
+        "roomNo": "5F-25",
+        "count": 4,
+        "totalDuration": 432,
+        "emergencyCount": 0
+      },
+      {
+        "roomNo": "5F-26",
+        "count": 4,
+        "totalDuration": 517,
+        "emergencyCount": 0
+      },
+      {
+        "roomNo": "6F-31",
+        "count": 4,
+        "totalDuration": 447,
+        "emergencyCount": 3
+      },
+      {
+        "roomNo": "5F-27",
+        "count": 4,
+        "totalDuration": 441,
+        "emergencyCount": 0
+      },
+      {
+        "roomNo": "5F-29",
+        "count": 4,
+        "totalDuration": 430,
+        "emergencyCount": 1
+      },
+      {
+        "roomNo": "5F-30",
+        "count": 4,
+        "totalDuration": 394,
+        "emergencyCount": 0
+      },
+      {
+        "roomNo": "6F-32",
+        "count": 4,
+        "totalDuration": 482,
+        "emergencyCount": 0
+      },
+      {
+        "roomNo": "6F-33",
+        "count": 3,
+        "totalDuration": 170,
+        "emergencyCount": 0
+      },
+      {
+        "roomNo": "6F-34",
+        "count": 3,
+        "totalDuration": 180,
+        "emergencyCount": 0
+      },
+      {
+        "roomNo": "6F-35",
+        "count": 3,
+        "totalDuration": 163,
+        "emergencyCount": 0
+      },
+      {
+        "roomNo": "6F-36",
+        "count": 4,
+        "totalDuration": 215,
+        "emergencyCount": 0
+      },
+      {
+        "roomNo": "6F-37",
+        "count": 4,
+        "totalDuration": 237,
+        "emergencyCount": 1
+      },
+      {
+        "roomNo": "6F-38",
+        "count": 4,
+        "totalDuration": 248,
+        "emergencyCount": 1
+      },
+      {
+        "roomNo": "6F-39",
+        "count": 3,
+        "totalDuration": 215,
+        "emergencyCount": 0
+      },
+      {
+        "roomNo": "6F-40",
+        "count": 3,
+        "totalDuration": 160,
+        "emergencyCount": 0
+      }
+    ],
+    "averageDuration": 127,
+    "averageStartDeviation": 6,
+    "averageEndDeviation": 8,
+    "firstSurgeryStart": "07:30",
+    "lastSurgeryEnd": "22:54",
+    "activeMedicalGroups": 80,
+    "activeOperatingRooms": 40
+  }
+}

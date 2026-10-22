@@ -1,0 +1,17 @@
+{
+  "staticRecords": 308,
+  "surgeries": 154,
+  "sha256": "6bc78770a9a072789cce656d6837f524a631235e96aef817ff01e1f102c3ea22",
+  "crossBuildingRecords": 41,
+  "browserChecks": [
+    "E3 static data range 2026-10-21 06:40 to 23:14",
+    "SS0001 selected: E3 acknowledged and clock 2026-10-21 14:00:00",
+    "Selection cleared: global mode and same 14:00:00 clock",
+    "No browser errors at final observation"
+  ],
+  "limitations": [
+    "Cross-building routes not supported",
+    "Visual path geometry not exhaustively checked for all 308 records",
+    "Timeline dragging covered by automated engine test; browser drag gesture not confirmed"
+  ]
+}

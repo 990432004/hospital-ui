@@ -5,14 +5,16 @@ const dateFields=['admissionTime','transferInTime','transferOutTime','plannedRec
 const pad=n=>String(n).padStart(2,'0')
 export function shiftScenarioTime(value,sourceDate,targetDate){
  if(!value||!/^\d{4}-\d{2}-\d{2}[ T]/.test(value)||!sourceDate||!targetDate||sourceDate===targetDate)return value
+ if(/(?:Z|[+-]\d\d:\d\d)$/.test(value)){const days=Date.parse(targetDate+'T00:00:00Z')-Date.parse(sourceDate+'T00:00:00Z');return new Date(Date.parse(value.slice(0,10)+'T00:00:00Z')+days).toISOString().slice(0,10)+value.slice(10)}
  const date=new Date(value.replace(' ','T')),delta=new Date(targetDate+'T12:00:00')-new Date(sourceDate+'T12:00:00')
  if(!Number.isFinite(date.getTime())||!Number.isFinite(delta))return value
  date.setTime(date.getTime()+delta)
  return `${date.getFullYear()}-${pad(date.getMonth()+1)}-${pad(date.getDate())} ${pad(date.getHours())}:${pad(date.getMinutes())}${/:\d\d:\d\d$/.test(value)?':'+pad(date.getSeconds()):''}`
 }
+export const ganttFloor=s=>String(s.operatingFloor||s.locations?.operatingRoom?.floorKey?.match(/-(\d+)F$/)?.[1]||String(s.operatingRoomNo||'').match(/(?:^|-)(\d+)F/i)?.[1]||'')
 export function filterGanttSurgeries(surgeries,filters={}){
  const fields={departments:'department',levels:'surgeryLevel',statuses:'status',priorities:'priority',anesthesiaTypes:'anesthesiaType'}
- return surgeries.filter(s=>Object.entries(fields).every(([key,field])=>!filters[key]?.length||filters[key].includes(s[field]))&&(!filters.floors?.length||filters.floors.includes(String(s.operatingRoomNo||'').match(/^(\d+)F/i)?.[1])))
+ return surgeries.filter(s=>Object.entries(fields).every(([key,field])=>!filters[key]?.length||filters[key].includes(s[field]))&&(!filters.floors?.length||filters.floors.includes(ganttFloor(s))))
 }
 export function createGanttData(scenario,surgeries,view,date){
  const shift=value=>shiftScenarioTime(value,scenario.meta?.date,date),visible=new Set(surgeries.map(s=>s.id)),byId=new Map(surgeries.map(s=>[s.id,s]))
@@ -20,6 +22,7 @@ export function createGanttData(scenario,surgeries,view,date){
  const source=equipment?(scenario.equipmentSchedules||[]).filter(s=>visible.has(s.surgeryId)).map(schedule=>({s:byId.get(schedule.surgeryId),schedule})):surgeries.map(s=>({s}))
  const rows=source.map(({s,schedule})=>{
   const raw={...s};for(const field of dateFields)raw[field]=shift(s[field]);if(Array.isArray(s.vitalSigns))raw.vitalSigns=s.vitalSigns.map(v=>({...v,time:shift(v.time)}))
+  if(s.transfers)raw.transfers=s.transfers.map(t=>({...t,...Object.fromEntries(['plannedStartTime','plannedEndTime','actualStartTime','actualEndTime','estimatedEndTime','startTime','endTime'].map(k=>[k,shift(t[k])]))}))
   let status=s.status==='已完成'?'completed':s.status==='进行中'?'in-progress':s.status==='取消'?'cancelled':'planned'
   if(pacu)status=s.recoveryEndTime?'completed':s.recoveryStartTime?'in-progress':'planned'
   const snapshot=scenario.meta?.asOf?shift(scenario.meta.asOf):null
