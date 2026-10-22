@@ -1,8 +1,6 @@
 <script setup>
 import {ref,onMounted,onUnmounted} from 'vue'
-const sceneUrl = new URL('http://localhost:8080/#/preview/hhWDzzBxVjumK1xBRWtyTl4vjPgjAfT45i3os-309hc?space=20260722000111')
-sceneUrl.hostname = window.location.hostname
-const url=import.meta.env.VITE_COMMAND_IFRAME_URL||sceneUrl.href,state=ref(url?'loading':'empty'),reload=ref(0)
+const url=import.meta.env.VITE_COMMAND_IFRAME_URL||'http://172.16.98.87:8080/#/preview/hhWDzzBxVjumK1xBRWtyTl4vjPgjAfT45i3os-309hc?space=20260722000111',state=ref(url?'loading':'empty'),reload=ref(0)
 let timer
 function start(){state.value='loading';clearTimeout(timer);timer=setTimeout(()=>state.value='timeout',15000)}
 function loaded(){clearTimeout(timer);state.value='loaded'}
